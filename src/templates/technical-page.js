@@ -7,6 +7,9 @@ import MarkdownContent from '../components/MarkdownContent';
 import Layout from '../components/Layout';
 
 export const TechnicalPageTemplate = ({ title, technicalPageSections }) => {
+  return (
+    ''
+  );
   /*const [technicalPageSectionsState, setTechnicalPageSectionsState] = useState(technicalPageSections);
 
   const renderElements = (obj, image, t1, t2) => {
@@ -118,7 +121,7 @@ TechnicalPageTemplate.propTypes = {
       })
     )
   })
-};
+};*/
 
 const TechnicalPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
@@ -128,7 +131,7 @@ const TechnicalPage = ({ data }) => {
     </Layout>
   );
 };
-
+/*
 TechnicalPage.propTypes = {
   data: PropTypes.object.isRequired
 };*/
