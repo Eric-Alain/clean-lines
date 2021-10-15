@@ -21,10 +21,10 @@ technicalPageSections:
 
         It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
       id: a1
-      image: /img/contact-landing.jpg
-      extraText: ""
+      image: /img/contact.jpg
+      extraText: ''
     - headingLevel: h2
-      image: ""
+      image: ''
       imageFloat: default
       imageWidth: default
       extraText: >-
@@ -36,9 +36,9 @@ technicalPageSections:
 
         It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
       subheading: Heading (h2 level) and two column text layout
-      text: "**The markdown editor has enough flexibility to allow to directly write
+      text: '**The markdown editor has enough flexibility to allow to directly write
         html in it, in the cases where you might need to nest specific elements
-        into a particular section.**"
+        into a particular section.**'
       id: a1
     - imageFloat: Right
       headingLevel: h3
@@ -60,12 +60,12 @@ technicalPageSections:
         It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
       id: a2
       image: /img/coffee.png
-      extraText: ""
+      extraText: ''
     - headingLevel: h4
-      image: ""
+      image: ''
       imageFloat: default
       imageWidth: default
-      extraText: ""
+      extraText: ''
       subheading: Subheading (h4 level)
       id: a3
       text: >-
@@ -88,10 +88,10 @@ technicalPageSections:
 
         * C
     - headingLevel: h5
-      image: ""
+      image: ''
       imageFloat: default
       imageWidth: default
-      extraText: ""
+      extraText: ''
       subheading: Subheading (h5) level
       id: a4
       text: It is a long established fact that a reader will be distracted by the
@@ -104,10 +104,10 @@ technicalPageSections:
         infancy. Various versions have evolved over the years, sometimes by
         accident, sometimes on purpose (injected humour and the like).
     - headingLevel: h6
-      image: ""
+      image: ''
       imageFloat: default
       imageWidth: default
-      extraText: ""
+      extraText: ''
       subheading: Subheading (h6 level)
       id: a5
       text: This one doesn't really make sense, but you get the point...

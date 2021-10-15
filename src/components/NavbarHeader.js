@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'gatsby';
-import logo from '../img/dball-header-no-bg.png';
-import { Container, Navbar, Nav, NavDropdown, Row, Col } from 'react-bootstrap';
+import logo from '../img/logo.png';
+import { Container, Navbar, Nav, Row, Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faInstagram, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
@@ -29,7 +29,7 @@ const NavbarHeader = () => {
 
   return (
     <Navbar collapseOnSelect expand='lg' bg='dark' variant='white'>
-      <Container className='g-1'>
+      <Container className='g-1 mx-3 mx-md-auto'>
         <Navbar.Brand>
           <Link to='/'>
             <img width='120px' height='auto' className='img-responsive' src={logo} alt='DBO logo' />
@@ -47,33 +47,11 @@ const NavbarHeader = () => {
                 <Link to='/about' className='nav-link'>
                   About
                 </Link>
-                <NavDropdown title='Leagues' id='leagues-dropdown' renderMenuOnMount={true}>
-                  <Link to='/leagues/drop-in' className='dropdown-item'>
-                    Drop-in
-                  </Link>
-                </NavDropdown>
-                <Link to='/registrations' className='nav-link'>
-                  Registrations
+                <Link to='technical/services' className='nav-link'>
+                  Services
                 </Link>
-                <NavDropdown title='Technical' id='technical-dropdown' renderMenuOnMount={true}>
-                  <Link to='/technical/rules-and-reffing' className='dropdown-item'>
-                    Rules and reffing
-                  </Link>
-                  <Link to='/technical/bylaws' className='dropdown-item'>
-                    Bylaws
-                  </Link>
-                  <Link to='/technical/dbo-tips' className='dropdown-item'>
-                    DBO Tips
-                  </Link>
-                  <Link to='/technical/membership' className='dropdown-item'>
-                    Membership
-                  </Link>
-                  <Link to='/technical/covid-19-protocol' className='dropdown-item'>
-                    COVID-19 Protocol
-                  </Link>
-                </NavDropdown>
-                <Link to='/events' className='nav-link'>
-                  Events
+                <Link to='/blog' className='nav-link'>
+                  Blog
                 </Link>
                 <Link to='/galleries' className='nav-link'>
                   Galleries
@@ -85,16 +63,16 @@ const NavbarHeader = () => {
             </Col>
             <Col xs='12'>
               <Nav className='justify-content-start justify-content-lg-end social-nav'>
-                <Nav.Link href='https://www.facebook.com/DodgeballOttawa/'>
+                <Nav.Link href='#'>
                   <FontAwesomeIcon icon={faFacebook} size='lg' />
                 </Nav.Link>
-                <Nav.Link href='https://www.instagram.com/dodgeballottawa/'>
+                <Nav.Link href='#'>
                   <FontAwesomeIcon icon={faInstagram} size='lg' />
                 </Nav.Link>
-                <Nav.Link href='https://twitter.com/dodgeballottawa'>
+                <Nav.Link href='#'>
                   <FontAwesomeIcon icon={faTwitter} size='lg' />
                 </Nav.Link>
-                <Nav.Link href='https://www.youtube.com/c/Dodgeballottawa'>
+                <Nav.Link href='#'>
                   <FontAwesomeIcon icon={faYoutube} size='lg' />
                 </Nav.Link>
               </Nav>

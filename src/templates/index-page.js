@@ -19,7 +19,7 @@ export const IndexPageTemplate = ({ landingBox, catchyBanner, pageSections }) =>
           }}
         >
           <Row className='justify-content-center'>
-            <Col xs='10' className='dbo-black-75 text-center rounded py-3'>
+            <Col xs='10' md='12' className='hero-text text-center rounded p-5'>
               <h1 className='display-2 font-weight-bold'>{landingBox.title}</h1>
               <h3>{landingBox.subheading}</h3>
             </Col>

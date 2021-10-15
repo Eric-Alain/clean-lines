@@ -7,20 +7,16 @@ import MarkdownContent from '../components/MarkdownContent';
 import Layout from '../components/Layout';
 
 export const TechnicalPageTemplate = ({ title, technicalPageSections }) => {
-  return (
-    ''
-  );
-  /*const [technicalPageSectionsState, setTechnicalPageSectionsState] = useState(technicalPageSections);
+  const [technicalPageSectionsState, setTechnicalPageSectionsState] = useState(technicalPageSections);
 
   const renderElements = (obj, image, t1, t2) => {
     //If an image is returned at all
     if (image !== null) {
-      
       /**************************/
       /*CONDITIONS FOR PREVIEWER*/
       /**************************/
       // If user filled both body fields, but also added an image
-    /*  if (t2.length > 0 && image.path !== 'empty.svg') {
+      if (t2.length > 0 && image.path !== 'empty.svg') {
         return (
           // Concatenate the fields in a single column and insert the image
           <Col>
@@ -53,7 +49,7 @@ export const TechnicalPageTemplate = ({ title, technicalPageSections }) => {
       /********************************/
       /*CONDITIONS FOR PLAIN COMPONENT*/
       /********************************/
-     /* if (t2.length > 0) {
+      if (t2.length > 0) {
         return (
           // Make content into a two column format without an image
           <>
@@ -102,8 +98,8 @@ export const TechnicalPageTemplate = ({ title, technicalPageSections }) => {
       </Container>
     </main>
   );
-  */};
-/*
+};
+
 TechnicalPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   technicalPageSections: PropTypes.shape({
@@ -121,7 +117,7 @@ TechnicalPageTemplate.propTypes = {
       })
     )
   })
-};*/
+};
 
 const TechnicalPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
@@ -131,13 +127,13 @@ const TechnicalPage = ({ data }) => {
     </Layout>
   );
 };
-/*
+
 TechnicalPage.propTypes = {
   data: PropTypes.object.isRequired
-};*/
+};
 
 export default TechnicalPage;
-/*
+
 export const technicalPageQuery = graphql`
   query technicalPageQuery($id: String!) {
     markdownRemark(id: { eq: $id }) {
@@ -164,4 +160,3 @@ export const technicalPageQuery = graphql`
     }
   }
 `;
-*/

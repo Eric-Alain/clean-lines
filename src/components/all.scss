@@ -4,12 +4,15 @@
 
 $white: #fff;
 $light-grey: #eff0f1;
-$dbo-red: #881012;
-$dbo-accent: #b60709;
+$theme-green: #495e31;
+$theme-green-accent: #647f43;
+$gold: #ab9900;
 $alt-black: #1b1b1b;
 $black: #000;
 
-$primary: $dbo-red;
+$primary: $theme-green;
+$primary-accent: $theme-green-accent;
+$primary-trim: $gold;
 $primary-invert: $white;
 
 //Small tablets and large smartphones (landscape view)
@@ -97,12 +100,12 @@ main {
   margin: 5rem auto;
 
   a {
-    color: $dbo-accent;
+    color: $primary-accent;
     text-decoration: none;
     @include transition(all 0.2s ease-out);
 
     &:hover {
-      color: $dbo-accent;
+      color: $primary-accent;
       text-decoration: underline;
       @include brightness(130%);
       @include transition(all 0.2s ease-out);
@@ -289,12 +292,12 @@ footer {
   padding: 3rem 2rem;
 
   a {
-    color: $dbo-accent;
+    color: $primary-accent;
     text-decoration: none;
     @include transition(all 0.2s ease-out);
 
     &:hover {
-      color: $dbo-accent;
+      color: $primary-accent;
       text-decoration: underline;
       @include brightness(130%);
       @include transition(all 0.2s ease-out);
@@ -305,6 +308,23 @@ footer {
 /************/
 /*INDEX PAGE*/
 /************/
+.hero-text {
+  background: $primary-invert;
+  box-shadow: 0px 0px 8px $primary;
+  position: relative;
+
+  &:after {
+    content: '';
+    display: flex;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    outline: 1px solid $primary-trim;
+    outline-offset: 2rem;
+  }
+}
 
 .catchy-banner {
   padding: 2.5rem 0;
@@ -368,7 +388,19 @@ footer {
     position: absolute;
     width: 55%;
     font-size: 0.7rem;
-    box-shadow: -1px 1px 30px $primary;
+    box-shadow: 0 0 8px $primary;
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      outline: 1px solid $primary-trim;
+      outline-offset: 1rem;
+    }
 
     @include md {
       font-size: 1rem;

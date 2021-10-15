@@ -65,14 +65,8 @@ collections:
                             [
                               '/',
                               '/about',
-                              '/leagues/drop-in',
-                              '/registrations',
-                              '/technical/rules-and-reffing',
-                              '/technical/bylaws',
-                              '/technical/dbo-tips',
-                              '/technical/membership',
-                              '/technical/covid-19-protocol',
-                              '/events',
+                              '/technical/services',
+                              '/blog',
                               '/galleries',
                               '/contact'
                             ],
