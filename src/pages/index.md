@@ -3,7 +3,8 @@ templateKey: index-page
 landingBox:
   image: /img/hero.jpg
   title: Clean lines
-  subheading: "A minimal a minimal and clean approach to your site. "
+  subheading: A minimal and clean approach to your site. Make use of effective
+    lines and simple typography.
 catchyBanner:
   body: >-
     ## You can insert an eye-grabbing sentence here.
@@ -37,7 +38,7 @@ pageSections:
       buttonLocation: /galleries
       image: /img/gallery.jpg
       subheading: Galleries
-      text: See galleries from past seasons, events.
+      text: See galleries of our latest work and events.
     - buttonText: Contact
       buttonLocation: /contact
       image: /img/contact.jpg
