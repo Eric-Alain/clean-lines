@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'gatsby';
 import logo from '../img/logo.png';
-import { Container, Navbar, Nav, Row, Col } from 'react-bootstrap';
+import { Container, Navbar, Nav, NavDropdown, Row, Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faInstagram, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
@@ -32,7 +32,7 @@ const NavbarHeader = () => {
       <Container className='g-1 mx-3 mx-md-auto'>
         <Navbar.Brand>
           <Link to='/'>
-            <img width='120px' height='auto' className='img-responsive' src={logo} alt='DBO logo' />
+            <img width='120px' height='auto' className='img-responsive' src={logo} alt='Clean lines logo' />
           </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls='responsive-navbar-nav' ref={toggleRef} onClick={() => setExpand(!expand)}>
@@ -47,9 +47,14 @@ const NavbarHeader = () => {
                 <Link to='/about' className='nav-link'>
                   About
                 </Link>
-                <Link to='technical/services' className='nav-link'>
-                  Services
-                </Link>
+                <NavDropdown title='Services' id='services-dropdown' renderMenuOnMount={true}>
+                  <Link to='/technical/demo' className='dropdown-item'>
+                    CMS Demo
+                  </Link>
+                  <Link to='/technical/services' className='dropdown-item'>
+                    Services
+                  </Link>
+                </NavDropdown>
                 <Link to='/blog' className='nav-link'>
                   Blog
                 </Link>

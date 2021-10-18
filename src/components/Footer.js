@@ -6,15 +6,15 @@ const Footer = () => {
   return (
     <footer>
       <Container>
-        <Row className='justify-content-around'>
-          <Col xs='12' sm='6' lg="8" className='mb-4'>
-            <h3>Dodgeball Ottawa</h3>
+        <Row className='justify-content-between'>
+          <Col xs='12' sm='6' lg='8' className='mb-4'>
+            <h3>Company name</h3>
             <p>
-              100 Brookfield Road
+              Street name
               <br />
-              Ottawa, ON K1V6J1
+              City, Province/State Postal/Zip code
               <br />
-              Canada
+              Country
             </p>
             <p>
               <Link to='/contact'>Contact us</Link>
@@ -35,9 +35,12 @@ const Footer = () => {
           <Col xs='12' sm='auto' className='mb-4'>
             <h3>Related</h3>
             <p>
-              <a href='#a'>Dodgeball Canada</a>
+              <a href='#a'>Related 1</a>
               <br />
-              <a href='#a'>Dodgeball Ontario</a>
+              <a href='#a'>Related 2</a>
+              <br />
+              <a href='#a'>Related 3</a>
+              <br />
             </p>
           </Col>
         </Row>
