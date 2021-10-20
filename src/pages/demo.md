@@ -1,8 +1,8 @@
 ---
-templateKey: technical-page
+templateKey: template-page
 title: Demo (don't delete)
-technicalPageSections:
-  technicalSection:
+templatePageSections:
+  templateSection:
     - imageFloat: Right
       headingLevel: h2
       subheading: This page is needed in order for other pages to be properly queried
@@ -10,7 +10,7 @@ technicalPageSections:
       imageWidth: 50%
       text: >-
         **While this kind of sucks, it's not a bad opportunity to use this page
-        as a way of demonstrating what the technical pages are capable of.**
+        as a way of demonstrating what the template pages are capable of.**
 
 
         Here's some lorem:

@@ -19,8 +19,8 @@ public_folder: /img
 
 collections:
   # Collection of unique, root level pages that aren't to be built over and over
-  - name: 'pages'
-    label: 'Pages'
+  - label: 'Unique pages'
+    name: 'unique-pages'    
     files:
       - file: 'src/pages/index.md'
         label: 'Landing page'
@@ -65,7 +65,7 @@ collections:
                             [
                               '/',
                               '/about',
-                              '/technical/services',
+                              '/services',
                               '/blog',
                               '/galleries',
                               '/contact'
@@ -77,31 +77,23 @@ collections:
                 ]
             }
 
-      - file: 'src/pages/about/index.md'
-        label: 'About'
-        name: 'About'
-        fields:
-          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'about-page' }
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
-
   # Collection of all pages found in the technical menu
-  - label: 'Technical pages'
-    label_singular: 'technical page'
-    name: 'technical-pages'
-    folder: 'src/pages/technical'
+  - label: 'Template pages'
+    label_singular: 'template page'
+    name: 'template-pages'
+    folder: 'src/pages'
     create: true
     slug: '{{slug}}'
     fields:
-      - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'technical-page' }
+      - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'template-page' }
       - { label: 'Title', name: 'title', widget: 'string' }
       - {
-          label: 'Technical page sections',
-          name: 'technicalPageSections',
+          label: 'Template page sections',
+          name: 'templatePageSections',
           widget: 'object',
           fields: [{
             label: Section,
-            name: technicalSection,            
+            name: templateSection,            
             widget: list,
             fields: [
               { label: Subheading, name: subheading, widget: string },
@@ -115,36 +107,6 @@ collections:
               { label: 'Second column text', name: extraText, widget: 'markdown', default: "", required: false }
             ]
           }]
-        }
-
-  # Collection of all pages found in the league menu
-  - label: 'League pages'
-    label_singular: 'league page'
-    name: 'league-pages'
-    folder: 'src/pages/league'
-    create: true
-    slug: '{{slug}}'
-    fields:
-      - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'league-page' }
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - {
-          label: 'Page Sections',
-          name: 'pageSections',
-          widget: 'object',
-          fields:
-            [
-              {
-                label: Section,
-                name: section,
-                widget: list,
-                fields:
-                  [
-                    { label: Subheading, name: subheading, widget: string },
-                    { label: Image, name: image, widget: image, required: false },
-                    { label: Text, name: text, widget: 'markdown' }
-                  ]
-              }
-            ]
         }
 
   # Blog

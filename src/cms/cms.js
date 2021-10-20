@@ -5,7 +5,7 @@ import cloudinary from 'netlify-cms-media-library-cloudinary';
 import AboutPagePreview from './preview-templates/AboutPagePreview';
 import BlogPostPreview from './preview-templates/BlogPostPreview';
 import IndexPagePreview from './preview-templates/IndexPagePreview';
-import TechnicalPagePreview from './preview-templates/TechnicalPagePreview';
+import TemplatePagePreview from './preview-templates/TemplatePagePreview';
 
 CMS.registerMediaLibrary(uploadcare);
 CMS.registerMediaLibrary(cloudinary);
@@ -15,6 +15,6 @@ CMS.registerMediaLibrary(cloudinary);
 // Otherwise, the preview template won't register
 
 CMS.registerPreviewTemplate('index', IndexPagePreview);
-CMS.registerPreviewTemplate('technical-pages', TechnicalPagePreview);
+CMS.registerPreviewTemplate('technical-pages', TemplatePagePreview);
 CMS.registerPreviewTemplate('about', AboutPagePreview);
 CMS.registerPreviewTemplate('blog', BlogPostPreview);

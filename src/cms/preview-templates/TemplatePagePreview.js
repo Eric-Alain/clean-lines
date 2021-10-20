@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { TechnicalPageTemplate } from '../../templates/technical-page';
+import { TemplatePageTemplate } from '../../templates/template-page';
 
-const TechnicalPagePreview = ({ entry, getAsset }) => {
+const TemplatePagePreview = ({ entry, getAsset }) => {
   if (entry) {
     const data = entry.getIn(['data']) ? entry.getIn(['data']).toJS() : {};
-    let technicalSection = [];
+    let templateSection = [];
 
-    if (data.hasOwnProperty('technicalPageSections')) {
-      technicalSection = data.technicalPageSections.technicalSection.map((sec) => ({
+    if (data.hasOwnProperty('templatePageSections')) {
+      templateSection = data.templatePageSections.templateSection.map((sec) => ({
         subheading: sec.subheading || '',
         headingLevel: sec.headingLevel || '',
         id: sec.id || '',
@@ -22,10 +22,10 @@ const TechnicalPagePreview = ({ entry, getAsset }) => {
     }
 
     return (
-      <TechnicalPageTemplate
+      <TemplatePageTemplate
         title={entry.getIn(['data', 'title'])}
-        technicalPageSections={{
-          technicalSection: technicalSection
+        templatePageSections={{
+          templateSection: templateSection
         }}
       />
     );
@@ -34,11 +34,11 @@ const TechnicalPagePreview = ({ entry, getAsset }) => {
   }
 };
 
-TechnicalPagePreview.propTypes = {
+TemplatePagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func
   }),
   widgetFor: PropTypes.func
 };
 
-export default TechnicalPagePreview;
+export default TemplatePagePreview;

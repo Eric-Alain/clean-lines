@@ -6,8 +6,8 @@ import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
 import MarkdownContent from '../components/MarkdownContent';
 import Layout from '../components/Layout';
 
-export const TechnicalPageTemplate = ({ title, technicalPageSections }) => {
-  const [technicalPageSectionsState, setTechnicalPageSectionsState] = useState(technicalPageSections);
+export const TemplatePageTemplate = ({ title, templatePageSections }) => {
+  const [templatePageSectionsState, setTemplatePageSectionsState] = useState(templatePageSections);
 
   const renderElements = (obj, image, t1, t2) => {
     //If an image is returned at all
@@ -72,7 +72,7 @@ export const TechnicalPageTemplate = ({ title, technicalPageSections }) => {
   };
 
   const renderSections = useCallback(() => {
-    return technicalPageSectionsState.technicalSection.map((item, i) => {
+    return templatePageSectionsState.templateSection.map((item, i) => {
       const HTag = `${item.headingLevel}`;
       return (
         <Col xs='12' key={i}>
@@ -83,12 +83,12 @@ export const TechnicalPageTemplate = ({ title, technicalPageSections }) => {
         </Col>
       );
     });
-  }, [technicalPageSectionsState]);
+  }, [templatePageSectionsState]);
 
   useEffect(() => {
-    setTechnicalPageSectionsState(technicalPageSections);
+    setTemplatePageSectionsState(templatePageSections);
     renderSections();
-  }, [technicalPageSections, renderSections]);
+  }, [templatePageSections, renderSections]);
 
   return (
     <main>
@@ -100,10 +100,10 @@ export const TechnicalPageTemplate = ({ title, technicalPageSections }) => {
   );
 };
 
-TechnicalPageTemplate.propTypes = {
+TemplatePageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
-  technicalPageSections: PropTypes.shape({
-    technicalSection: PropTypes.arrayOf(
+  templatePageSections: PropTypes.shape({
+    templateSection: PropTypes.arrayOf(
       PropTypes.shape({
         subheading: PropTypes.string,
         headingLevel: PropTypes.string,
@@ -119,28 +119,28 @@ TechnicalPageTemplate.propTypes = {
   })
 };
 
-const TechnicalPage = ({ data }) => {
+const TemplatePage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
   return (
     <Layout>
-      <TechnicalPageTemplate title={frontmatter.title} technicalPageSections={frontmatter.technicalPageSections} />
+      <TemplatePageTemplate title={frontmatter.title} templatePageSections={frontmatter.templatePageSections} />
     </Layout>
   );
 };
 
-TechnicalPage.propTypes = {
+TemplatePage.propTypes = {
   data: PropTypes.object.isRequired
 };
 
-export default TechnicalPage;
+export default TemplatePage;
 
-export const technicalPageQuery = graphql`
-  query technicalPageQuery($id: String!) {
+export const templatePageQuery = graphql`
+  query templatePageQuery($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
-        technicalPageSections {
-          technicalSection {
+        templatePageSections {
+          templateSection {
             subheading
             headingLevel
             id
