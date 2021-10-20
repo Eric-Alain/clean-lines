@@ -48,10 +48,10 @@ const NavbarHeader = () => {
                   About
                 </Link>
                 <NavDropdown title='Services' id='services-dropdown' renderMenuOnMount={true}>
-                  <Link to='/technical/demo' className='dropdown-item'>
+                  <Link to='/demo' className='dropdown-item'>
                     CMS Demo
                   </Link>
-                  <Link to='/technical/services' className='dropdown-item'>
+                  <Link to='/services' className='dropdown-item'>
                     Services
                   </Link>
                 </NavDropdown>

@@ -1,8 +1,8 @@
 ---
-templateKey: technical-page
+templateKey: template-page
 title: Test
-technicalPageSections:
-  technicalSection:
+templatePageSections:
+  templateSection:
     - imageFloat: Right
       headingLevel: h2
       subheading: I am a test page

@@ -15,6 +15,6 @@ CMS.registerMediaLibrary(cloudinary);
 // Otherwise, the preview template won't register
 
 CMS.registerPreviewTemplate('index', IndexPagePreview);
-CMS.registerPreviewTemplate('technical-pages', TemplatePagePreview);
+CMS.registerPreviewTemplate('template-pages', TemplatePagePreview);
 CMS.registerPreviewTemplate('about', AboutPagePreview);
 CMS.registerPreviewTemplate('blog', BlogPostPreview);
