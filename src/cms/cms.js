@@ -6,7 +6,7 @@ import BlogPostPreview from './preview-templates/BlogPostPreview';
 import IndexPagePreview from './preview-templates/IndexPagePreview';
 import TemplatePagePreview from './preview-templates/TemplatePagePreview';
 
-CMS.registerMediaLibrary(uploadcare);
+CMS.registerMediaLibrary(uploadcare); 
 CMS.registerMediaLibrary(cloudinary);
 
 // Note about .registerPreviewTemplate('name', component)
