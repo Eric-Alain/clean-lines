@@ -19,10 +19,10 @@ templatePageSections:
 
         Nordic ANA hub, discerning impeccable boutique Singapore remarkable sharp espresso Fast Lane uniforms Airbus A380 sophisticated. Joy Helsinki Airbus A380 exquisite Beams the highest quality Nordic Toto elegant. Winkreative Ettinger Gaggenau bulletin Singapore, izakaya Shinkansen impeccable Boeing 787. Alluring first-class Marylebone, Ginza vibrant bureaux emerging Washlet Muji artisanal flat white Nordic delightful hub elegant. Vibrant eclectic cosy flat white.
       id: a1
-      image: /img/about.jpg
+      image: https://res.cloudinary.com/dky5oko1h/image/upload/v1635866302/about_b5ced1.jpg
       extraText: ""
     - headingLevel: h2
-      image: /img/services.jpg
+      image: https://res.cloudinary.com/dky5oko1h/image/upload/v1635866300/services_gycc3d.jpg
       imageFloat: Right
       imageWidth: 50%
       text: >-
@@ -43,7 +43,7 @@ templatePageSections:
       subheading: Our mission
       id: a2
     - headingLevel: h2
-      image: /img/gallery.jpg
+      image: https://res.cloudinary.com/dky5oko1h/image/upload/v1635866300/gallery_ar2txv.jpg
       imageFloat: Right
       imageWidth: 50%
       text: >-
