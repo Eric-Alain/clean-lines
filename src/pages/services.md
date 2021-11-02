@@ -47,7 +47,7 @@ templatePageSections:
       subheading: Service 3
       id: a3
     - headingLevel: h2
-      image: /img/services.jpg
+      image: https://res.cloudinary.com/dky5oko1h/image/upload/v1635866300/services_gycc3d.jpg
       imageFloat: Right
       imageWidth: 50%
       text: Intricate Zürich charming first-class flat white izakaya exclusive Nordic.
