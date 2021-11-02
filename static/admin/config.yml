@@ -17,13 +17,13 @@ backend:
 media_library:
   name: cloudinary
   config:
-    cloud_name: dky5oko1h
+    cloud_name: "dky5oko1h"
     api_key: 216125798889682
 
 media_folder: static/img
 public_folder: /img
 
-collections:
+collections:  
   # Collection of unique, root level pages that aren't to be built over and over
   - label: 'Unique pages'
     name: 'unique-pages'    
