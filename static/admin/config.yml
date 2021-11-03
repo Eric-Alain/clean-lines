@@ -19,6 +19,7 @@ media_library:
   config:
     cloud_name: "dky5oko1h"
     api_key: 216125798889682
+    multiple: true
 
 media_folder: static/img
 public_folder: /img
@@ -82,6 +83,30 @@ collections:
                   }
                 ]
             }
+      - file: 'src/pages/galleries.md'
+        label: 'Galleries page'
+        name: 'galleries'
+        fields:
+          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'galleries-page' }
+          - {
+              label: 'Galleries',
+              name: galleries,
+              widget: object,
+              fields:
+                [
+                  {
+                    label: Gallery,
+                    name: gallery,
+                    widget: list,
+                    default: [{ image: null, title: ''}],
+                    fields:
+                      [
+                        { label: Title, name: title, widget: string },
+                        { label: Images, name: images, widget: image }
+                      ]
+                    }
+                ]
+            }
 
   # Collection of all pages found in the technical menu
   - label: 'Template pages'
@@ -105,7 +130,7 @@ collections:
               { label: Subheading, name: subheading, widget: string },
               { label: 'Heading level', name: headingLevel, widget: 'select', options: ['h2', 'h3', 'h4', 'h5', 'h6'], default: 'h2', required: false },
               { label: ID, name: id, widget: string, required: false },
-              { label: Image, name: image, widget: image, default: '', required: false },
+              { label: Image, name: image, widget: image, allow_multiple: true, default: '', required: false },
               { label: Alt text, name: alt, widget: string, required: false },
               { label: 'Image float', name: imageFloat, widget: 'select', options: ['Left', 'Right'], default: 'default', required: false },
               { label: 'Image width', name: imageWidth, widget: 'select', options: ['25%', '50%', '75%'], default: 'default', required: false },
