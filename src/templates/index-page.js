@@ -83,13 +83,7 @@ export const pageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         landingBox {
-          image {
-            childImageSharp {
-              fluid(maxWidth: 2048, quality: 100) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
+          image
           title
           subheading
         }
@@ -98,11 +92,7 @@ export const pageQuery = graphql`
         }
         pageSections {
           section {
-            image {
-              childImageSharp {
-                gatsbyImageData(width: 800, formats: [AUTO, WEBP, AVIF], quality: 50, placeholder: BLURRED)
-              }
-            }
+            image
             subheading
             text
             buttonText

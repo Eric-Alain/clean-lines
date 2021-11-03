@@ -13,6 +13,6 @@ CMS.registerMediaLibrary(cloudinary);
 // Otherwise, the preview template won't register
 
 CMS.registerPreviewTemplate('index', IndexPagePreview);
-CMS.registerPreviewTemplate('galleries-pages', GalleriesPagePreview);
+CMS.registerPreviewTemplate('galleries-page', GalleriesPagePreview);
 CMS.registerPreviewTemplate('template-pages', TemplatePagePreview);
 CMS.registerPreviewTemplate('blog', BlogPostPreview);

@@ -85,12 +85,12 @@ collections:
             }
       - file: 'src/pages/galleries.md'
         label: 'Galleries page'
-        name: 'galleries'
+        name: 'galleriesPage'
         fields:
           - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'galleries-page' }
           - {
               label: 'Galleries',
-              name: galleries-list,
+              name: galleries,
               widget: object,
               fields:
                 [

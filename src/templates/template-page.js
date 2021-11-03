@@ -144,11 +144,7 @@ export const templatePageQuery = graphql`
             subheading
             headingLevel
             id
-            image {
-              childImageSharp {
-                gatsbyImageData(width: 800, formats: [AUTO, WEBP, AVIF], quality: 50, placeholder: BLURRED)
-              }
-            }
+            image
             alt
             imageFloat
             imageWidth

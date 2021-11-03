@@ -7,8 +7,8 @@ const GalleriesPagePreview = ({ entry, getAsset }) => {
     return (
       <GalleriesPageTemplate
         galleries={{
-          title: entry.getIn(['data', 'galleries-list', 'gallery', 'title']),
-          images: getAsset(entry.getIn(['data', 'galleries-list', 'gallery', 'images']))
+          title: entry.getIn(['data', 'galleries', 'gallery', 'title']),
+          images: getAsset(entry.getIn(['data', 'galleries', 'gallery', 'images']))
         }}
       />
     );
