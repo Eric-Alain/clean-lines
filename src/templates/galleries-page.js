@@ -3,41 +3,33 @@ import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import { Container, Row, Col } from 'react-bootstrap';
 import Layout from '../components/Layout';
+import Thumbnails from '../components/Thumbnails';
 
 export const GalleriesPageTemplate = ({ galleries }) => {
-  
-  let func = () => {
-    let arr = [];
-    galleries.gallery.forEach((item) => {
-      item.images.forEach((subItem) => {
-        if (subItem !== undefined) {
-          arr.push(`<p>${subItem}</p>`);
-        }
-      });
-     
-    });
-     return arr;
-  }
-
   return (
-    <Container fluid>
-      <Row>
-        <Col xs='12'>
-          <div dangerouslySetInnerHTML={{ __html: func() }} />
-        </Col>
-      </Row>
-    </Container>
+    <main>
+      <Container>
+        <Row>
+          <h1 className='display-3 fw-bold mb-2 pb-2 border-bottom'>Galleries</h1>
+          <Col xs='12' className='mt-5'>
+            <Thumbnails galleries={galleries} />
+          </Col>
+        </Row>
+      </Container>
+    </main>
   );
 };
-/*
+
 GalleriesPageTemplate.propTypes = {
-  galleries: PropTypes.arrayOf({
-    gallery: PropTypes.shape({
-      title: PropTypes.string,
-      images: PropTypes.object || PropTypes.string      
-    })
+  galleries: PropTypes.shape({
+    gallery: PropTypes.arrayOf(
+      PropTypes.shape({
+        title: PropTypes.string,
+        images: PropTypes.oneOfType([PropTypes.object, PropTypes.array, PropTypes.string])
+      })
+    )
   })
-};*/
+};
 
 const GalleriesPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
@@ -66,7 +58,7 @@ export const GalleriesQuery = graphql`
         galleries {
           gallery {
             title
-            images 
+            images
           }
         }
       }

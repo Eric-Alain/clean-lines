@@ -29,7 +29,7 @@ const PreviewCompatibleImage = ({ imageInfo }) => {
   };
 
   /*Destructed object  variable assignment*/
-  const { alt = '', image, imageFloat, imageWidth } = imageInfo;
+  const { alt = '', image, imageFloat, imageWidth, className } = imageInfo;
 
   const [float, setFloat] = useState(getFloatClass(imageFloat));
   const [width, setWidth] = useState(getWidthClass(imageWidth));
@@ -41,15 +41,15 @@ const PreviewCompatibleImage = ({ imageInfo }) => {
 
   if (!!image && !!image.childImageSharp) {
     
-    return <GatsbyImage image={getImage(image)} className={`${float} ${width} rounded`} alt={alt} />;
+    return <GatsbyImage image={getImage(image)} className={`${float} ${width} ${className} rounded`} alt={alt} />;
   }
   //For technical preview
   else if (image.path !== 'empty.svg' && typeof image.url === 'string') {
-    return <img src={image.url} alt={alt} className={`${float} ${width} rounded gatsby-image-wrapper`} />;
+    return <img src={image.url} alt={alt} className={`${float} ${width} ${className} rounded gatsby-image-wrapper`} />;
   }
   //For landing preview 
   else if (!!image && typeof image === 'string') {
-    return <img src={image} alt={alt} className={`${float} ${width} rounded gatsby-image-wrapper`} />;
+    return <img src={image} alt={alt} className={`${float} ${width} ${className} rounded gatsby-image-wrapper`} />;
   }
 
   return null;
