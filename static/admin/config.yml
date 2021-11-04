@@ -90,16 +90,17 @@ collections:
     name: 'gallery-pages'
     folder: 'src/pages/galleries'
     create: true
+    delete: true
     slug: '{{slug}}'
     fields:
       - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'gallery-page' }
+      - { label: 'Title', name: 'title', widget: 'string' }
       - {          
           label: Gallery,
           name: gallery,
           widget: object,          
           fields:
             [
-              { label: Title, name: title, widget: string },
               { label: Images, name: images, widget: image },
               { label: Description, name: description, widget: string }
             ],
