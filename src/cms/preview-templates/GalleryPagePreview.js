@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { GalleriesPageTemplate } from '../../templates/galleries-page';
+import { GalleryPageTemplate } from '../../templates/gallery-page';
 
-const GalleriesPagePreview = ({ entry, getAsset }) => {
+const GalleryPagePreview = ({ entry, getAsset }) => {
   if (entry) {
     let data = entry.getIn(['data', 'galleries']).toJS();
     
@@ -13,17 +13,17 @@ const GalleriesPagePreview = ({ entry, getAsset }) => {
       };
     });    
 
-    return <GalleriesPageTemplate galleries={mappedGallery} />;
+    return <GalleryPageTemplate galleries={mappedGallery} />;
   } else {
     return <div>Loading...</div>;
   }
 };
 
-GalleriesPagePreview.propTypes = {
+GalleryPagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func
   }),
   getAsset: PropTypes.func
 };
 
-export default GalleriesPagePreview;
+export default GalleryPagePreview;

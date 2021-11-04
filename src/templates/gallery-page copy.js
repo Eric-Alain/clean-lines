@@ -5,7 +5,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import Layout from '../components/Layout';
 import Thumbnails from '../components/Thumbnails';
 
-export const GalleriesPageTemplate = ({ galleries }) => {
+export const GalleryPageTemplate = ({ galleries }) => {
   const [galleriesState, setGalleriesState] = useState(galleries);
   
   const renderThumbnails = useCallback(() => {
@@ -32,7 +32,7 @@ export const GalleriesPageTemplate = ({ galleries }) => {
   );
 };
 
-GalleriesPageTemplate.propTypes = {
+GalleryPageTemplate.propTypes = {
   gallery: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string,
@@ -41,17 +41,17 @@ GalleriesPageTemplate.propTypes = {
   )
 };
 
-const GalleriesPage = ({ data }) => {
+const GalleryPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
 
   return (
     <Layout>
-      <GalleriesPageTemplate galleries={frontmatter.galleries.gallery} />
+      <GalleryPageTemplate galleries={frontmatter.galleries.gallery} />
     </Layout>
   );
 };
 
-GalleriesPage.propTypes = {
+GalleryPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object
@@ -59,10 +59,10 @@ GalleriesPage.propTypes = {
   })
 };
 
-export default GalleriesPage;
+export default GalleryPage;
 
-export const GalleriesQuery = graphql`
-  query GalleriesPageTemplate($id: String!) {
+export const GalleryQuery = graphql`
+  query GalleryPageTemplate($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         galleries {

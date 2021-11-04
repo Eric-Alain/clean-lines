@@ -1,5 +1,5 @@
 ---
-templateKey: galleries-page
+templateKey: gallery-page
 galleries:
   gallery:
     - title: Demo gallery

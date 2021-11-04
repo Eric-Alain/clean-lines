@@ -83,33 +83,28 @@ collections:
                   }
                 ]
             }
-      - file: 'src/pages/galleries.md'
-        label: 'Galleries page'
-        name: 'galleriesPage'
-        folder: 'src/pages/galleries'
-        create: true
-        slug: '{{slug}}'
-        fields:
-          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'galleries-page' }
-          - {
-              label: 'Galleries',
-              name: galleries,
-              widget: object,
-              fields:
-                [
-                  {
-                    label: Gallery,
-                    name: gallery,
-                    widget: list,
-                    default: [{ image: null, title: ''}],
-                    fields:
-                      [
-                        { label: Title, name: title, widget: string },
-                        { label: Images, name: images, widget: image }
-                      ]
-                    }
-                ]
-            }
+  
+  # Collection of all pages found in the technical menu
+  - label: 'Gallery pages'
+    label_singular: 'gallery page'
+    name: 'gallery-pages'
+    folder: 'src/pages/galleries'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'gallery-page' }
+      - {          
+          label: Gallery,
+          name: gallery,
+          widget: object,          
+          fields:
+            [
+              { label: Title, name: title, widget: string },
+              { label: Images, name: images, widget: image },
+              { label: Description, name: description, widget: string }
+            ],
+          default: [{ image: null, title: '', description: ''}]
+          }
 
   # Collection of all pages found in the technical menu
   - label: 'Template pages'
