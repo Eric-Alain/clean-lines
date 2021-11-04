@@ -5,7 +5,9 @@ import { Row, Col, Card } from 'react-bootstrap';
 import { Link } from 'gatsby';
 
 const Thumbnails = ({ galleries }) => {
-  return (
+    //console.log(galleries);
+  
+    return (
     <Row className='justify-content-center'>
       {galleries.gallery.map((gallery, i) => {
         console.log(gallery.images[0]);

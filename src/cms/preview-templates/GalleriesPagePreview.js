@@ -4,14 +4,9 @@ import { GalleriesPageTemplate } from '../../templates/galleries-page';
 
 const GalleriesPagePreview = ({ entry, getAsset }) => {
   if (entry) {
-    return (
-      <GalleriesPageTemplate
-        galleries={{
-          title: entry.getIn(['data', 'galleries', 'gallery', 'title']),
-          images: getAsset(entry.getIn(['data', 'galleries', 'gallery', 'images']))
-        }}
-      />
-    );
+    let data = entry.getIn(['data', 'galleries']).toJS();
+
+    return <GalleriesPageTemplate galleries={data} />;
   } else {
     return <div>Loading...</div>;
   }
