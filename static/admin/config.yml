@@ -91,7 +91,7 @@ collections:
     folder: 'src/pages/galleries'
     create: true
     delete: true
-    slug: '{{slug}}'
+    slug: '{{slug}}.md'
     fields:
       - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'gallery-page' }
       - { label: 'Title', name: 'title', widget: 'string' }

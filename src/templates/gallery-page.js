@@ -5,8 +5,9 @@ import { Container, Row, Col } from 'react-bootstrap';
 import Layout from '../components/Layout';
 import Thumbnails from '../components/Thumbnails';
 
-export const GalleryPageTemplate = ({ galleries }) => {
-  const [galleriesState, setGalleriesState] = useState(galleries);
+export const GalleryPageTemplate = ({ title, gallery }) => {
+  
+  const [galleriesState, setGalleriesState] = useState({title: title, gallery: gallery});
   
   const renderThumbnails = useCallback(() => {
     return <Thumbnails galleries={galleriesState} />;
@@ -14,9 +15,9 @@ export const GalleryPageTemplate = ({ galleries }) => {
 
 
   useEffect(() => {
-    setGalleriesState(galleries);
+    setGalleriesState({ title: title, gallery: gallery });
     renderThumbnails();
-  }, [galleries, galleriesState, renderThumbnails]);
+  }, [title, gallery, galleriesState, renderThumbnails]);
   
   return (
     <main>
@@ -46,7 +47,7 @@ const GalleryPage = ({ data }) => {
 
   return (
     <Layout>
-      <GalleryPageTemplate galleries={frontmatter.galleries.gallery} />
+      <GalleryPageTemplate title={frontmatter.title} gallery={frontmatter.gallery} />
     </Layout>
   );
 };
@@ -64,11 +65,15 @@ export default GalleryPage;
 export const GalleryQuery = graphql`
   query GalleryPageTemplate($id: String!) {
     markdownRemark(id: { eq: $id }) {
+      fields {
+        slug
+      }
       frontmatter {
+        title
         gallery {
-          title
           images
-        }        
+          description
+        }
       }
     }
   }
