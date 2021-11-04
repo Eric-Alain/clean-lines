@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, useCallback} from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import { Container, Row, Col } from 'react-bootstrap';
@@ -6,13 +6,25 @@ import Layout from '../components/Layout';
 import Thumbnails from '../components/Thumbnails';
 
 export const GalleriesPageTemplate = ({ galleries }) => {
+  const [galleriesState, setGalleriesState] = useState(galleries);
+  
+  const renderThumbnails = useCallback(() => {
+    return <Thumbnails galleries={galleriesState} />;
+  }, [galleriesState]);
+
+
+  useEffect(() => {
+    setGalleriesState(galleries);
+    renderThumbnails();
+  }, [galleries, galleriesState, renderThumbnails]);
+  
   return (
     <main>
       <Container>
         <Row>
           <h1 className='display-3 fw-bold mb-2 pb-2 border-bottom'>Galleries</h1>
           <Col xs='12' className='mt-5'>
-            <Thumbnails galleries={galleries} />
+            {renderThumbnails()}
           </Col>
         </Row>
       </Container>
@@ -21,14 +33,12 @@ export const GalleriesPageTemplate = ({ galleries }) => {
 };
 
 GalleriesPageTemplate.propTypes = {
-  galleries: PropTypes.shape({
-    gallery: PropTypes.arrayOf(
-      PropTypes.shape({
-        title: PropTypes.string,
-        images: PropTypes.oneOfType([PropTypes.object, PropTypes.array, PropTypes.string])
-      })
-    )
-  })
+  gallery: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string,
+      images: PropTypes.oneOfType([PropTypes.object, PropTypes.array, PropTypes.string])
+    })
+  )
 };
 
 const GalleriesPage = ({ data }) => {
@@ -36,7 +46,7 @@ const GalleriesPage = ({ data }) => {
 
   return (
     <Layout>
-      <GalleriesPageTemplate galleries={frontmatter.galleries} />
+      <GalleriesPageTemplate galleries={frontmatter.galleries.gallery} />
     </Layout>
   );
 };
