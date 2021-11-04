@@ -86,6 +86,9 @@ collections:
       - file: 'src/pages/galleries.md'
         label: 'Galleries page'
         name: 'galleriesPage'
+        folder: 'src/pages/galleries'
+        create: true
+        slug: '{{slug}}'
         fields:
           - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'galleries-page' }
           - {
