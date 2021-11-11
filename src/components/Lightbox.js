@@ -1,7 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import PreviewCompatibleImage from './PreviewCompatibleImage';
-import { Row, Col, Card } from 'react-bootstrap';
 import ReactGridGallery from 'react-grid-gallery';
 
 const Lightbox = ({ gallery }) => {
@@ -9,7 +7,6 @@ const Lightbox = ({ gallery }) => {
     const testArrayForObjects = data.images.some((i) => {
       return typeof i === 'object';
     });
-
     let arr = [];
     data.images.map((item, i) => {
       arr.push({
@@ -17,24 +14,20 @@ const Lightbox = ({ gallery }) => {
         thumbnail: testArrayForObjects ? item.url : item,
         nano: testArrayForObjects ? item.url : item,
         thumbnailWidth: 320,
-        thumbnailHeight: 174
+        thumbnailHeight: 180
       });
     });
-
     return arr;
   };
 
-  return <ReactGridGallery images={createImageArray(gallery)} enableImageSelection={false} rowHeight={300} />;
+  return <ReactGridGallery images={createImageArray(gallery)} enableImageSelection={false} />;
 };
-/*
+
 Lightbox.propTypes = {
-  section: PropTypes.arrayOf(
-    PropTypes.shape({
-      image: PropTypes.object,
-      subheading: PropTypes.string,
-      text: PropTypes.string
-    })
-  )
-};*/
+  gallery: PropTypes.shape({
+    description: PropTypes.string,
+    images: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.object]))
+  })
+};
 
 export default Lightbox;

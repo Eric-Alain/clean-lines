@@ -26,9 +26,9 @@ export const GalleryPageTemplate = ({ title, gallery }) => {
   return (
     <main>
       <Container>
-        <Row>
+        <Row className='justify-content-center'>
           <h1 className='display-3 fw-bold mb-2 pb-2 border-bottom'>{galleriesState.title}</h1>
-          <Col xs='12' className='mt-5'>
+          <Col xs='auto' className='mt-5'>
             {renderLightbox()}
           </Col>
         </Row>
