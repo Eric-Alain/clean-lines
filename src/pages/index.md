@@ -1,7 +1,8 @@
 ---
 templateKey: index-page
 landingBox:
-  image: https://res.cloudinary.com/dky5oko1h/image/upload/e_art:primavera/v1635866300/hero_rrg9b4.jpg
+  image:
+    - https://res.cloudinary.com/dky5oko1h/image/upload/v1635866300/Clean%20lines%20/hero_rrg9b4.jpg
   title: Clean lines
   subheading: A minimal and clean approach to your site. Make use of effective
     lines and simple typography.
