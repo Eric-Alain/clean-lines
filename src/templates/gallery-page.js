@@ -1,31 +1,35 @@
-import React, { useState, useEffect, useCallback} from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import { Container, Row, Col } from 'react-bootstrap';
 import Layout from '../components/Layout';
-import Thumbnails from '../components/Thumbnails';
+import Lightbox from '../components/Lightbox';
 
 export const GalleryPageTemplate = ({ title, gallery }) => {
-  
-  const [galleriesState, setGalleriesState] = useState({title: title, gallery: gallery});
-  
-  const renderThumbnails = useCallback(() => {
-    return <Thumbnails galleries={galleriesState} />;
-  }, [galleriesState]);
+  const [galleriesState, setGalleriesState] = useState({
+    images: gallery.images,
+    description: gallery.description
+  });
 
+  const renderLightbox = () => {
+    return <Lightbox gallery={galleriesState} />;
+  };
 
   useEffect(() => {
-    setGalleriesState({ title: title, gallery: gallery });
-    renderThumbnails();
-  }, [title, gallery, galleriesState, renderThumbnails]);
-  
+    setGalleriesState({
+      images: gallery.images,
+      description: gallery.description
+    });
+    renderLightbox();
+  }, [title, gallery]);
+
   return (
     <main>
       <Container>
         <Row>
-          <h1 className='display-3 fw-bold mb-2 pb-2 border-bottom'>Galleries</h1>
+          <h1 className='display-3 fw-bold mb-2 pb-2 border-bottom'>{galleriesState.title}</h1>
           <Col xs='12' className='mt-5'>
-            {renderThumbnails()}
+            {renderLightbox()}
           </Col>
         </Row>
       </Container>
@@ -34,12 +38,10 @@ export const GalleryPageTemplate = ({ title, gallery }) => {
 };
 
 GalleryPageTemplate.propTypes = {
-  gallery: PropTypes.arrayOf(
-    PropTypes.shape({
-      title: PropTypes.string,
-      images: PropTypes.oneOfType([PropTypes.object, PropTypes.array, PropTypes.string])
-    })
-  )
+  gallery: PropTypes.shape({
+    title: PropTypes.string,
+    images: PropTypes.oneOfType([PropTypes.object, PropTypes.array, PropTypes.string])
+  })
 };
 
 const GalleryPage = ({ data }) => {

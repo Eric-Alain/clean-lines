@@ -35,6 +35,7 @@
     "react": "^16.8.4",
     "react-bootstrap": "^2.0.0-beta.5",
     "react-dom": "^16.8.4",
+    "react-grid-gallery": "^0.5.5",
     "react-helmet": "^6.0.0",
     "showdown": "^1.9.1",
     "uuid": "^7.0.0"

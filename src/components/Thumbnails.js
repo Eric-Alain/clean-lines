@@ -5,21 +5,22 @@ import { Row, Col, Card } from 'react-bootstrap';
 import { Link } from 'gatsby';
 
 const Thumbnails = ({ galleries }) => {
-  console.log(galleries);
+  //console.log(galleries);
   return (
     <Row className='justify-content-center'>
-      {galleries.map((gallery, i) => {
+      {galleries.map((item, i) => {
+          console.log(item)
         return (
           <Col xs='12' lg='4' key={i} className='mb-3'>
             <Card className='rounded-0 p-0 p-md-4'>
               <Card.Body>
                 <Card.Title>
-                  <h3 className='mb-1 pb-1 border-bottom'>{gallery.title || ''}</h3>
+                  <h3 className='mb-1 pb-1 border-bottom'>{item.title || ''}</h3>
                 </Card.Title>
                 <div className='zoom-overlay'>
                   <PreviewCompatibleImage
                     imageInfo={{
-                      image: gallery.images[0] || '',
+                      image: item.gallery.images[0] || '',
                       className: 'w-100 float-none'
                     }}
                   />

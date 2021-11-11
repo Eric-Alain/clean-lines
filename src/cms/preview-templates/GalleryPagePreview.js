@@ -4,16 +4,25 @@ import { GalleryPageTemplate } from '../../templates/gallery-page';
 
 const GalleryPagePreview = ({ entry, getAsset }) => {
   if (entry) {
-    let data = entry.getIn(['data', 'galleries']).toJS();
-    
-    let mappedGallery = data.gallery.map((item, i) => {
-      return {        
-        title: item.title || '',
-        images: item.images || ['']
-      };
-    });    
+    let data = entry.getIn(['data']).toJS();
 
-    return <GalleryPageTemplate galleries={mappedGallery} />;
+    const mapGallery = (obj) => {
+      let arr = [];
+      obj.gallery.images.map((item) => {
+        arr.push(getAsset(item));
+      });
+      return arr;
+    };
+
+    return (
+      <GalleryPageTemplate
+        title={data.title}
+        gallery={{
+          images: mapGallery(data),
+          description: data.gallery.description
+        }}
+      />
+    );
   } else {
     return <div>Loading...</div>;
   }

@@ -58,9 +58,14 @@ const NavbarHeader = () => {
                 <Link to='/blog' className='nav-link'>
                   Blog
                 </Link>
-                <Link to='/galleries' className='nav-link'>
-                  Galleries
-                </Link>
+                <NavDropdown title='Galleries' id='galleries-dropdown' renderMenuOnMount={true}>
+                  <Link to='/galleries' className='dropdown-item'>
+                    All galleries
+                  </Link>
+                  <Link to='/galleries/demo-1' className='dropdown-item'>
+                    Demo 1
+                  </Link>
+                </NavDropdown>
                 <Link to='/contact' className='nav-link'>
                   Contact
                 </Link>
