@@ -3,6 +3,11 @@ templateKey: gallery-page
 title: Demo 1
 gallery:
   images:
+    - https://res.cloudinary.com/dky5oko1h/image/upload/v1637176870/Clean%20lines%20/Gallery%20one/blake-verdoorn-cssvEZacHvQ-unsplash_csban2.jpg
+    - https://res.cloudinary.com/dky5oko1h/image/upload/v1637176866/Clean%20lines%20/Gallery%20one/tim-swaan-eOpewngf68w-unsplash_lnpk4w.jpg
+    - https://res.cloudinary.com/dky5oko1h/image/upload/v1637176863/Clean%20lines%20/Gallery%20one/adam-kool-ndN00KmbJ1c-unsplash_im5yt4.jpg
+    - https://res.cloudinary.com/dky5oko1h/image/upload/v1637176858/Clean%20lines%20/Gallery%20one/lukasz-szmigiel-jFCViYFYcus-unsplash_xa54uc.jpg
+    - https://res.cloudinary.com/dky5oko1h/image/upload/v1637176853/Clean%20lines%20/Gallery%20one/david-marcu-78A265wPiO4-unsplash_a6nuep.jpg
     - https://res.cloudinary.com/dky5oko1h/image/upload/v1635866302/Clean%20lines%20/Gallery%20one/about_b5ced1.jpg
     - https://res.cloudinary.com/dky5oko1h/image/upload/v1635866300/Clean%20lines%20/Gallery%20one/services_gycc3d.jpg
     - https://res.cloudinary.com/dky5oko1h/image/upload/v1635866300/Clean%20lines%20/Gallery%20one/blog_eqnzzq.jpg
