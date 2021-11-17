@@ -617,26 +617,45 @@ footer {
 /**********/
 /*LIGHTBOX*/
 /**********/
-.ReactGridGallery_tile-viewport {
+.ReactGridGallery {
+  display: flex;
+  max-width: 100%;
   overflow: hidden;
-  img {
-    -webkit-transition: 0.8s;
-    -moz-transition: 0.8s;
-    -o-transition: 0.8s;
-    -ms-transition: 0.8s;
-    transition: 0.8s;
 
-    &:hover {
-      -moz-transform: scale(1.05) rotate(0deg);
-      -webkit-transform: scale(1.05) rotate(0deg);
-      -o-transform: scale(1.05) rotate(0deg);
-      -ms-transform: scale(1.05) rotate(0deg);
-      transform: scale(1.05) rotate(0deg);
-      -webkit-transition: 0.8s;
-      -moz-transition: 0.8s;
-      -o-transition: 0.8s;
-      -ms-transition: 0.8s;
-      transition: 0.8s;
+  .ReactGridGallery_tile {
+    flex-grow: 1;
+    height: 40vh;
+    width: 25% !important;
+    &:last-child {
+      flex-grow: 10;
+    }
+    .ReactGridGallery_tile-viewport {
+      img {
+        height: auto !important;
+        width: auto !important;
+        max-height: 100%;
+        min-width: 100%;
+        object-fit: cover;
+        vertical-align: bottom;
+        -webkit-transition: 0.8s;
+        -moz-transition: 0.8s;
+        -o-transition: 0.8s;
+        -ms-transition: 0.8s;
+        transition: 0.8s;
+
+        &:hover {
+          -moz-transform: scale(1.05) rotate(0deg);
+          -webkit-transform: scale(1.05) rotate(0deg);
+          -o-transform: scale(1.05) rotate(0deg);
+          -ms-transform: scale(1.05) rotate(0deg);
+          transform: scale(1.05) rotate(0deg);
+          -webkit-transition: 0.8s;
+          -moz-transition: 0.8s;
+          -o-transition: 0.8s;
+          -ms-transition: 0.8s;
+          transition: 0.8s;
+        }
+      }
     }
   }
 }

@@ -6,32 +6,24 @@ import Layout from '../components/Layout';
 import Lightbox from '../components/Lightbox';
 
 export const GalleryPageTemplate = ({ title, gallery }) => {
+  
   const [galleriesState, setGalleriesState] = useState({
     images: gallery.images,
     description: gallery.description
   });
-
-  const renderLightbox = () => {
-    return <Lightbox gallery={galleriesState} />;
-  };
 
   useEffect(() => {
     setGalleriesState({
       images: gallery.images,
       description: gallery.description
     });
-    renderLightbox();
   }, [title, gallery]);
 
   return (
     <main>
       <Container>
-        <Row className='justify-content-center'>
-          <h1 className='display-3 fw-bold mb-2 pb-2 border-bottom'>{galleriesState.title}</h1>
-          <Col xs='auto' className='mt-5'>
-            {renderLightbox()}
-          </Col>
-        </Row>
+        <h1 className='display-3 fw-bold mb-2 pb-2 border-bottom'>{galleriesState.title}</h1>
+        <Lightbox gallery={galleriesState} />
       </Container>
     </main>
   );
