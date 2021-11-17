@@ -8,7 +8,7 @@ const Lightbox = ({ gallery }) => {
       return typeof i === 'object';
     });
     let arr = [];
-    data.images.map((item, i) => {
+    data.images.forEach((item) => {
       arr.push({
         src: testArrayForObjects ? item.url : item,
         thumbnail: testArrayForObjects ? item.url : item,

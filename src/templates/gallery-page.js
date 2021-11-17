@@ -6,7 +6,6 @@ import Layout from '../components/Layout';
 import Lightbox from '../components/Lightbox';
 
 export const GalleryPageTemplate = ({ title, gallery }) => {
-  
   const [galleriesState, setGalleriesState] = useState({
     images: gallery.images,
     description: gallery.description
@@ -22,8 +21,12 @@ export const GalleryPageTemplate = ({ title, gallery }) => {
   return (
     <main>
       <Container>
-        <h1 className='display-3 fw-bold mb-2 pb-2 border-bottom'>{galleriesState.title}</h1>
-        <Lightbox gallery={galleriesState} />
+        <Row className='justify-content-center'>
+          <h1 className='display-3 fw-bold mb-2 pb-2 border-bottom'>{title}</h1>
+          <Col xs='auto' className='mt-5'>
+            <Lightbox gallery={galleriesState} />
+          </Col>
+        </Row>
       </Container>
     </main>
   );
