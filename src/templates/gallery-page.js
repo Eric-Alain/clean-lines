@@ -6,17 +6,17 @@ import Layout from '../components/Layout';
 import Lightbox from '../components/Lightbox';
 
 export const GalleryPageTemplate = ({ title, gallery }) => {
-  const [galleriesState, setGalleriesState] = useState({
+  const [galleryState, setGalleryState] = useState({
     images: gallery.images,
     description: gallery.description
   });
 
   useEffect(() => {
-    setGalleriesState({
+    setGalleryState({
       images: gallery.images,
       description: gallery.description
     });
-  }, [title, gallery]);
+  }, [gallery]);
 
   return (
     <main>
@@ -24,7 +24,7 @@ export const GalleryPageTemplate = ({ title, gallery }) => {
         <Row className='justify-content-center'>
           <h1 className='display-3 fw-bold mb-2 pb-2 border-bottom'>{title}</h1>
           <Col xs='auto' className='mt-5'>
-            <Lightbox gallery={galleriesState} />
+            <Lightbox gallery={galleryState} />
           </Col>
         </Row>
       </Container>

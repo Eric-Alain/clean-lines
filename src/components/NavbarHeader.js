@@ -59,11 +59,17 @@ const NavbarHeader = () => {
                   Blog
                 </Link>
                 <NavDropdown title='Galleries' id='galleries-dropdown' renderMenuOnMount={true}>
-                  <Link to='/galleries' className='dropdown-item'>
+                  <Link to='/galleries/landing' className='dropdown-item'>
                     All galleries
                   </Link>
                   <Link to='/galleries/demo-1' className='dropdown-item'>
                     Demo 1
+                  </Link>
+                  <Link to='/galleries/demo-2' className='dropdown-item'>
+                    Demo 2
+                  </Link>
+                  <Link to='/galleries/demo-3' className='dropdown-item'>
+                    Demo 3
                   </Link>
                 </NavDropdown>
                 <Link to='/contact' className='nav-link'>
