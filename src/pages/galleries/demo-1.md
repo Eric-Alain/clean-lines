@@ -17,6 +17,7 @@ gallery:
     - https://res.cloudinary.com/dky5oko1h/image/upload/v1635866302/Clean%20lines%20/Gallery%20one/about_b5ced1.jpg
   description: Galleries source their images from Cloudinary. The Lightbox
     component modifies the URLs to add some parameters to the link in order to
-    optimize deliver and performance before using a third-party
-    (react-grid-gallery.js) component to actually build the grid.
+    optimize delivery, format and performance before using a third-party
+    (react-grid-gallery.js) component to actually build the grid. Images sourced
+    from Cloudinary are delivered in webp format.
 ---
