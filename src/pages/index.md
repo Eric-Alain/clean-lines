@@ -20,7 +20,8 @@ catchyBanner:
     Concierge essential Nordic discerning Washlet, izakaya hand-crafted ryokan. Sharp ryokan alluring soft power charming, concierge bureaux.
 pageSections:
   section:
-    - image: https://res.cloudinary.com/dky5oko1h/image/upload/v1635866302/about_b5ced1.jpg
+    - image:
+        - https://res.cloudinary.com/dky5oko1h/image/upload/v1637438240/Clean%20lines%20/Gallery%20one/matthew-smith-Rfflri94rs8-unsplash_wvmkwl.jpg
       subheading: About
       text: Learn more about what makes us who we are.
       buttonText: Learn more
@@ -29,20 +30,24 @@ pageSections:
       buttonLocation: /technical/rules-and-reffing
       subheading: Services
       text: What we have to offer.
-      image: https://res.cloudinary.com/dky5oko1h/image/upload/v1635866300/services_gycc3d.jpg
+      image:
+        - https://res.cloudinary.com/dky5oko1h/image/upload/v1635866302/Clean%20lines%20/Gallery%20one/about_b5ced1.jpg
     - buttonText: Check out blog
       buttonLocation: /events
-      image: https://res.cloudinary.com/dky5oko1h/image/upload/v1635866300/blog_eqnzzq.jpg
+      image:
+        - https://res.cloudinary.com/dky5oko1h/image/upload/v1635866300/Clean%20lines%20/Gallery%20one/services_gycc3d.jpg
       subheading: Blog
       text: See what's new and exciting in our world.
     - buttonText: Check out galleries
       buttonLocation: /galleries
-      image: https://res.cloudinary.com/dky5oko1h/image/upload/v1635866300/gallery_ar2txv.jpg
+      image:
+        - https://res.cloudinary.com/dky5oko1h/image/upload/v1637176940/Clean%20lines%20/Gallery%20two/jay-mantri-TFyi0QOx08c-unsplash_twx0mv.jpg
       subheading: Galleries
       text: See galleries of our latest work and events.
     - buttonText: Contact
       buttonLocation: /contact
-      image: https://res.cloudinary.com/dky5oko1h/image/upload/v1635866300/contact_u1wuby.jpg
+      image:
+        - https://res.cloudinary.com/dky5oko1h/image/upload/v1635866300/Clean%20lines%20/Gallery%20one/contact_u1wuby.jpg
       subheading: Contact
       text: Have more questions? We are ready to help. Reach out!
 ---
