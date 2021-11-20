@@ -5,14 +5,14 @@ import { GalleryPageTemplate } from '../../templates/gallery-page';
 const GalleryPagePreview = ({ entry, getAsset }) => {
   if (entry) {
     let data = entry.getIn(['data']).toJS();
-
+    
     const mapGallery = (obj) => {
       console.log(obj)
       
-      if (obj.gallery) {
+      if (obj.gallery.images) {
         return obj.gallery.images.map((item) => getAsset(item));
       } else {
-        return null;
+        return [""];
       }
     };
 
@@ -21,7 +21,7 @@ const GalleryPagePreview = ({ entry, getAsset }) => {
         title={data.title}
         gallery={{
           images: mapGallery(data),
-          description: data.gallery.description
+          description: data.gallery.description ? data.gallery.description : 'Add description here'
         }}
       />
     );
