@@ -7,7 +7,6 @@ import Sections from '../components/Sections';
 import MarkdownContent from '../components/MarkdownContent';
 
 export const IndexPageTemplate = ({ landingBox, catchyBanner, pageSections }) => {
-  
   return (
     <Container fluid>
       <Row>
@@ -40,21 +39,23 @@ export const IndexPageTemplate = ({ landingBox, catchyBanner, pageSections }) =>
 
 IndexPageTemplate.propTypes = {
   landingBox: PropTypes.shape({
-    image: PropTypes.object || PropTypes.string,
+    image: PropTypes.oneOfType([PropTypes.string, PropTypes.array, PropTypes.object]),
     title: PropTypes.string,
-    subheading: PropTypes.string    
+    subheading: PropTypes.string
   }),
   catchyBanner: PropTypes.shape({
     body: PropTypes.string
   }),
-  pageSections: PropTypes.arrayOf({
-    section: PropTypes.shape({
-      image: PropTypes.object || PropTypes.string,
-      subheading: PropTypes.string,
-      text: PropTypes.string,
-      buttonText: PropTypes.string,
-      buttonLocation: PropTypes.string
-    })
+  pageSections: PropTypes.shape({
+    section: PropTypes.arrayOf(
+      PropTypes.shape({
+        buttonLocation: PropTypes.string,
+        buttonText: PropTypes.string,
+        image: PropTypes.oneOfType([PropTypes.string, PropTypes.array, PropTypes.object]),
+        subheading: PropTypes.string,
+        text: PropTypes.string
+      })
+    )
   })
 };
 
