@@ -5,7 +5,7 @@ landingBox:
     - https://res.cloudinary.com/dky5oko1h/image/upload/v1635866300/Clean%20lines%20/hero_rrg9b4.jpg
   title: Clean lines
   subheading: A minimal and clean approach to your site. Make use of effective
-    lines and simple typography.
+    lines and simple typography. Powered by the Netlify CMS.
 catchyBanner:
   body: >-
     ## You can insert an eye-grabbing sentence here.
