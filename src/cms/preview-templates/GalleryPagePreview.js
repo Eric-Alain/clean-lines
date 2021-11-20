@@ -7,7 +7,13 @@ const GalleryPagePreview = ({ entry, getAsset }) => {
     let data = entry.getIn(['data']).toJS();
 
     const mapGallery = (obj) => {
-      return obj.gallery.images.map((item) => getAsset(item));
+      console.log(obj)
+      
+      if (obj.gallery) {
+        return obj.gallery.images.map((item) => getAsset(item));
+      } else {
+        return null;
+      }
     };
 
     return (

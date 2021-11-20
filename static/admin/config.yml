@@ -17,17 +17,17 @@ backend:
 media_library:
   name: cloudinary
   config:
-    cloud_name: "dky5oko1h"
+    cloud_name: 'dky5oko1h'
     api_key: 216125798889682
     multiple: true
 
 media_folder: static/img
 public_folder: /img
 
-collections:  
+collections:
   # Collection of unique, root level pages that aren't to be built over and over
   - label: 'Unique pages'
-    name: 'unique-pages'    
+    name: 'unique-pages'
     files:
       - file: 'src/pages/index.md'
         label: 'Landing page'
@@ -68,22 +68,14 @@ collections:
                           label: ButtonLocation,
                           name: buttonLocation,
                           widget: 'select',
-                          options:
-                            [
-                              '/',
-                              '/about',
-                              '/services',
-                              '/blog',
-                              '/galleries',
-                              '/contact'
-                            ],
+                          options: ['/', '/about', '/services', '/blog', '/galleries', '/contact'],
                           default: ['/']
                         }
                       ]
                   }
                 ]
             }
-  
+
   # Collection of all pages found in the technical menu
   - label: 'Gallery pages'
     label_singular: 'gallery page'
@@ -95,17 +87,13 @@ collections:
     fields:
       - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'gallery-page' }
       - { label: 'Title', name: 'title', widget: 'string' }
-      - {          
+      - {
           label: Gallery,
           name: gallery,
-          widget: object,          
-          fields:
-            [
-              { label: Images, name: images, widget: image },
-              { label: Description, name: description, widget: string }
-            ],
-          default: [{ image: null, title: '', description: ''}]
-          }
+          widget: object,
+          fields: [{ label: Images, name: images, widget: image }, { label: Description, name: description, widget: string }],
+          default: [{ image: '', title: 'Gallery', description: 'Describe what your gallery is all about. You can make a long description, or keep it brief. Do what feels good.' }]
+        }
 
   # Collection of all pages found in the technical menu
   - label: 'Template pages'
@@ -121,22 +109,26 @@ collections:
           label: 'Template page sections',
           name: 'templatePageSections',
           widget: 'object',
-          fields: [{
-            label: Section,
-            name: templateSection,            
-            widget: list,
-            fields: [
-              { label: Subheading, name: subheading, widget: string },
-              { label: 'Heading level', name: headingLevel, widget: 'select', options: ['h2', 'h3', 'h4', 'h5', 'h6'], default: 'h2', required: false },
-              { label: ID, name: id, widget: string, required: false },
-              { label: Image, name: image, widget: image, allow_multiple: true, default: '', required: false },
-              { label: Alt text, name: alt, widget: string, required: false },
-              { label: 'Image float', name: imageFloat, widget: 'select', options: ['Left', 'Right'], default: 'default', required: false },
-              { label: 'Image width', name: imageWidth, widget: 'select', options: ['25%', '50%', '75%'], default: 'default', required: false },
-              { label: Text, name: text, widget: 'markdown', default: "", required: false },
-              { label: 'Second column text', name: extraText, widget: 'markdown', default: "", required: false }
+          fields:
+            [
+              {
+                label: Section,
+                name: templateSection,
+                widget: list,
+                fields:
+                  [
+                    { label: Subheading, name: subheading, widget: string },
+                    { label: 'Heading level', name: headingLevel, widget: 'select', options: ['h2', 'h3', 'h4', 'h5', 'h6'], default: 'h2', required: false },
+                    { label: ID, name: id, widget: string, required: false },
+                    { label: Image, name: image, widget: image, allow_multiple: true, default: '', required: false },
+                    { label: Alt text, name: alt, widget: string, required: false },
+                    { label: 'Image float', name: imageFloat, widget: 'select', options: ['Left', 'Right'], default: 'default', required: false },
+                    { label: 'Image width', name: imageWidth, widget: 'select', options: ['25%', '50%', '75%'], default: 'default', required: false },
+                    { label: Text, name: text, widget: 'markdown', default: '', required: false },
+                    { label: 'Second column text', name: extraText, widget: 'markdown', default: '', required: false }
+                  ]
+              }
             ]
-          }]
         }
 
   # Blog
