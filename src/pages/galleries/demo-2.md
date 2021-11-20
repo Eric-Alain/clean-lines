@@ -1,6 +1,6 @@
 ---
 templateKey: gallery-page
-title: Demo 2
+title: Gallery 2
 gallery:
   images:
     - https://res.cloudinary.com/dky5oko1h/image/upload/v1637176959/Clean%20lines%20/Gallery%20two/jason-ortego-buF62ewDLcQ-unsplash_glcdtg.jpg
@@ -15,5 +15,6 @@ gallery:
     - https://res.cloudinary.com/dky5oko1h/image/upload/v1637176941/Clean%20lines%20/Gallery%20two/goutham-krishna-h5wvMCdOV3w-unsplash_mrspu3.jpg
     - https://res.cloudinary.com/dky5oko1h/image/upload/v1637176940/Clean%20lines%20/Gallery%20two/jay-mantri-TFyi0QOx08c-unsplash_twx0mv.jpg
     - https://res.cloudinary.com/dky5oko1h/image/upload/v1637176936/Clean%20lines%20/Gallery%20two/daniel-roe-lpjb_UMOyx8-unsplash_gexiji.jpg
-  description: Blablablablablabla
+  description: Describe what your gallery is all about. You can make a long
+    description, or keep it brief. Do what feels good.
 ---
