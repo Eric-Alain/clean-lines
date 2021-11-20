@@ -4,7 +4,7 @@ import PreviewCompatibleImage from './PreviewCompatibleImage';
 import { Row, Col, Card } from 'react-bootstrap';
 import { Link } from 'gatsby';
 
-const Sections = ({ pageSections }) => {
+const Sections = ({ pageSections }) => {   
   return (
     <>
       {pageSections.section.map((section, i) => (

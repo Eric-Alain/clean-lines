@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react'
-import PropTypes from 'prop-types'
+import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 const PreviewCompatibleImage = ({ imageInfo }) => {
-  
   const getFloatClass = (float) => {
     switch (float) {
       case 'Left':
@@ -27,10 +26,20 @@ const PreviewCompatibleImage = ({ imageInfo }) => {
         return '';
     }
   };
+  /*Modify Cloudinary urls if provided in order to optimize them (size, performance, format, cropping etc)*/
+  const adjustForCloudinary = (str) => {
+    if (/https.*?cloudinary/.test(str)) {
+      return str.replace(/^(.*?upload\/)(.*?)(\.jpg)$/, '$1c_mfit,c_scale,f_auto,q_auto:eco,w_900/$2.webp');
+    } else {
+      return str;
+    }
+  };
+  const image = adjustForCloudinary(imageInfo.image.toString());
 
   /*Destructed object  variable assignment*/
-  const { alt = '', image, imageFloat, imageWidth, className } = imageInfo;
+  const { alt = '', imageFloat, imageWidth, className } = imageInfo;
 
+  /*States,  for changes in CMS*/
   const [float, setFloat] = useState(getFloatClass(imageFloat));
   const [width, setWidth] = useState(getWidthClass(imageWidth));
 
@@ -40,28 +49,27 @@ const PreviewCompatibleImage = ({ imageInfo }) => {
   }, [imageInfo, imageFloat, imageWidth]);
 
   if (!!image && !!image.childImageSharp) {
-    
     return <GatsbyImage image={getImage(image)} className={`${float} ${width} ${className} rounded`} alt={alt} />;
   }
   //For technical preview
   else if (image.path !== 'empty.svg' && typeof image.url === 'string') {
     return <img src={image.url} alt={alt} className={`${float} ${width} ${className} rounded gatsby-image-wrapper`} />;
   }
-  //For landing preview 
+  //For landing preview
   else if (!!image && typeof image === 'string') {
     return <img src={image} alt={alt} className={`${float} ${width} ${className} rounded gatsby-image-wrapper`} />;
   }
 
   return null;
-}
+};
 
 PreviewCompatibleImage.propTypes = {
   imageInfo: PropTypes.shape({
     alt: PropTypes.string,
     childImageSharp: PropTypes.object,
-    image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
+    image: PropTypes.oneOfType([PropTypes.string, PropTypes.array, PropTypes.object]).isRequired,
     style: PropTypes.object
   }).isRequired
 };
 
-export default PreviewCompatibleImage
+export default PreviewCompatibleImage;
