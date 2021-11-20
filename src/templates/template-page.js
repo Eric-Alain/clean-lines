@@ -108,7 +108,7 @@ TemplatePageTemplate.propTypes = {
         subheading: PropTypes.string,
         headingLevel: PropTypes.string,
         id: PropTypes.string,
-        image: PropTypes.oneOfType([PropTypes.object || PropTypes.string]),
+        image: PropTypes.oneOfType([PropTypes.string, PropTypes.array, PropTypes.object]),
         alt: PropTypes.string,
         imageFloat: PropTypes.string,
         imageWidth: PropTypes.string,
