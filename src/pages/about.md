@@ -19,10 +19,12 @@ templatePageSections:
 
         Nordic ANA hub, discerning impeccable boutique Singapore remarkable sharp espresso Fast Lane uniforms Airbus A380 sophisticated. Joy Helsinki Airbus A380 exquisite Beams the highest quality Nordic Toto elegant. Winkreative Ettinger Gaggenau bulletin Singapore, izakaya Shinkansen impeccable Boeing 787. Alluring first-class Marylebone, Ginza vibrant bureaux emerging Washlet Muji artisanal flat white Nordic delightful hub elegant. Vibrant eclectic cosy flat white.
       id: a1
-      image: https://res.cloudinary.com/dky5oko1h/image/upload/v1635866302/about_b5ced1.jpg
+      image:
+        - https://res.cloudinary.com/dky5oko1h/image/upload/v1635866302/Clean%20lines%20/Gallery%20one/about_b5ced1.jpg
       extraText: ""
     - headingLevel: h2
-      image: https://res.cloudinary.com/dky5oko1h/image/upload/v1635866300/services_gycc3d.jpg
+      image:
+        - https://res.cloudinary.com/dky5oko1h/image/upload/v1635866300/Clean%20lines%20/Gallery%20one/services_gycc3d.jpg
       imageFloat: Right
       imageWidth: 50%
       text: >-
@@ -43,9 +45,10 @@ templatePageSections:
       subheading: Our mission
       id: a2
     - headingLevel: h2
-      image: https://res.cloudinary.com/dky5oko1h/image/upload/v1635866300/gallery_ar2txv.jpg
-      imageFloat: Right
-      imageWidth: 50%
+      image:
+        - https://res.cloudinary.com/dky5oko1h/image/upload/v1637177029/Clean%20lines%20/Gallery%20three/gabriel-jimenez-jin4W1HqgL4-unsplash_bworz8.jpg
+      imageFloat: Left
+      imageWidth: 25%
       text: >-
         Airport Marylebone Porter hand-crafted Beams. Ginza global joy
         hand-crafted Washlet remarkable, handsome K-pop sharp izakaya quality of
