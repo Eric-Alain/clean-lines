@@ -17,11 +17,11 @@ const PreviewCompatibleImage = ({ imageInfo }) => {
   const getWidthClass = (width) => {
     switch (width) {
       case '25%':
-        return 'w-25 w-md-25';
+        return 'w-100 w-md-25';
       case '50%':
         return 'w-100 w-md-50';
       case '75%':
-        return 'w-75 w-md-75';
+        return 'w-100 w-md-75';
       default:
         return '';
     }
@@ -35,6 +35,8 @@ const PreviewCompatibleImage = ({ imageInfo }) => {
     }
   };
   const image = adjustForCloudinary(imageInfo.image.toString());
+
+  console.log(image);
 
   /*Destructed object  variable assignment*/
   const { alt = '', imageFloat, imageWidth, className } = imageInfo;
@@ -51,12 +53,9 @@ const PreviewCompatibleImage = ({ imageInfo }) => {
   if (!!image && !!image.childImageSharp) {
     return <GatsbyImage image={getImage(image)} className={`${float} ${width} ${className} rounded`} alt={alt} />;
   }
-  //For technical preview
-  else if (image.path !== 'empty.svg' && typeof image.url === 'string') {
-    return <img src={image.url} alt={alt} className={`${float} ${width} ${className} rounded gatsby-image-wrapper`} />;
-  }
-  //For landing preview
-  else if (!!image && typeof image === 'string') {
+
+  //For cloudinary images
+  else if (!!image && !!/https.*?cloudinary/.test(image)) {
     return <img src={image} alt={alt} className={`${float} ${width} ${className} rounded gatsby-image-wrapper`} />;
   }
 
