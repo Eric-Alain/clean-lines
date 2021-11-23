@@ -4,15 +4,29 @@ title: Services
 templatePageSections:
   templateSection:
     - headingLevel: h2
-      image: ""
-      imageFloat: default
-      imageWidth: default
-      text: Monocle ipsum dolor sit amet scandinavian espresso Airbus A380 Sunspel
+      image:
+        - https://res.cloudinary.com/dky5oko1h/image/upload/v1637176947/Clean%20lines%20/Gallery%20two/justin-kauffman-a8lTjWJJgLA-unsplash_yqcub6.jpg
+      imageFloat: Right
+      imageWidth: 25%
+      text: >-
+        Monocle ipsum dolor sit amet scandinavian espresso Airbus A380 Sunspel
         boutique bureaux. Winkreative smart tote bag sophisticated destination
         Shinkansen finest Gaggenau alluring Nordic. Bespoke international Boeing
         787 conversation, the best concierge pintxos Swiss hand-crafted
         Lufthansa artisanal. Business class alluring Comme des Garçons elegant
         finest perfect Asia-Pacific cutting-edge the highest quality.
+
+
+        Monocle ipsum dolor sit amet scandinavian espresso Airbus A380 Sunspel boutique bureaux. Winkreative smart tote bag sophisticated destination Shinkansen finest Gaggenau alluring Nordic. Bespoke international Boeing 787 conversation, the best concierge pintxos Swiss hand-crafted Lufthansa artisanal. Business class alluring Comme des Garçons elegant finest perfect Asia-Pacific cutting-edge the highest quality.
+
+
+        Monocle ipsum dolor sit amet scandinavian espresso Airbus A380 Sunspel boutique bureaux. Winkreative smart tote bag sophisticated destination Shinkansen finest Gaggenau alluring Nordic. Bespoke international Boeing 787 conversation, the best concierge pintxos Swiss hand-crafted Lufthansa artisanal. Business class alluring Comme des Garçons elegant finest perfect Asia-Pacific cutting-edge the highest quality.
+
+
+        Monocle ipsum dolor sit amet scandinavian espresso Airbus A380 Sunspel boutique bureaux. Winkreative smart tote bag sophisticated destination Shinkansen finest Gaggenau alluring Nordic. Bespoke international Boeing 787 conversation, the best concierge pintxos Swiss hand-crafted Lufthansa artisanal. Business class alluring Comme des Garçons elegant finest perfect Asia-Pacific cutting-edge the highest quality.
+
+
+        Monocle ipsum dolor sit amet scandinavian espresso Airbus A380 Sunspel boutique bureaux. Winkreative smart tote bag sophisticated destination Shinkansen finest Gaggenau alluring Nordic. Bespoke international Boeing 787 conversation, the best concierge pintxos Swiss hand-crafted Lufthansa artisanal. Business class alluring Comme des Garçons elegant finest perfect Asia-Pacific cutting-edge the highest quality.
       extraText: ""
       subheading: Service 1
       id: a1
@@ -47,19 +61,27 @@ templatePageSections:
       subheading: Service 3
       id: a3
     - headingLevel: h2
-      image: https://res.cloudinary.com/dky5oko1h/image/upload/v1635866300/services_gycc3d.jpg
+      image:
+        - https://res.cloudinary.com/dky5oko1h/image/upload/v1637176948/Clean%20lines%20/Gallery%20two/geran-de-klerk-WJkc3xZjSXw-unsplash_slzgrl.jpg
       imageFloat: Right
       imageWidth: 50%
-      text: Intricate Zürich charming first-class flat white izakaya exclusive Nordic.
-        Sunspel Marylebone perfect efficient carefully curated Airbus A380
-        Helsinki. Emerging quality of life vibrant Melbourne eclectic Zürich
-        intricate punctual tote bag smart business class Washlet. Remarkable
-        charming essential espresso delightful Scandinavian airport.
+      text: >-
+        Intricate Zürich charming first-class flat white izakaya exclusive
+        Nordic. Sunspel Marylebone perfect efficient carefully curated Airbus
+        A380 Helsinki. Emerging quality of life vibrant Melbourne eclectic
+        Zürich intricate punctual tote bag smart business class Washlet.
+        Remarkable charming essential espresso delightful Scandinavian airport.
         Cutting-edge Muji punctual intricate Tsutaya, discerning Airbus A380.
         Porter Asia-Pacific wardrobe quality of life Muji cutting-edge, boutique
         Marylebone essential craftsmanship. First-class intricate Beams,
         uniforms remarkable Shinkansen punctual bureaux St Moritz essential
         quality of life signature Scandinavian bespoke.
+
+
+        Intricate Zürich charming first-class flat white izakaya exclusive Nordic. Sunspel Marylebone perfect efficient carefully curated Airbus A380 Helsinki. Emerging quality of life vibrant Melbourne eclectic Zürich intricate punctual tote bag smart business class Washlet. Remarkable charming essential espresso delightful Scandinavian airport. Cutting-edge Muji punctual intricate Tsutaya, discerning Airbus A380. Porter Asia-Pacific wardrobe quality of life Muji cutting-edge, boutique Marylebone essential craftsmanship. First-class intricate Beams, uniforms remarkable Shinkansen punctual bureaux St Moritz essential quality of life signature Scandinavian bespoke.
+
+
+        Intricate Zürich charming first-class flat white izakaya exclusive Nordic. Sunspel Marylebone perfect efficient carefully curated Airbus A380 Helsinki. Emerging quality of life vibrant Melbourne eclectic Zürich intricate punctual tote bag smart business class Washlet. Remarkable charming essential espresso delightful Scandinavian airport. Cutting-edge Muji punctual intricate Tsutaya, discerning Airbus A380. Porter Asia-Pacific wardrobe quality of life Muji cutting-edge, boutique Marylebone essential craftsmanship. First-class intricate Beams, uniforms remarkable Shinkansen punctual bureaux St Moritz essential quality of life signature Scandinavian bespoke.
       extraText: ""
       subheading: Service 4
       id: a4
