@@ -36,8 +36,6 @@ const PreviewCompatibleImage = ({ imageInfo }) => {
   };
   const image = adjustForCloudinary(imageInfo.image.toString());
 
-  console.log(image);
-
   /*Destructed object  variable assignment*/
   const { alt = '', imageFloat, imageWidth, className } = imageInfo;
 

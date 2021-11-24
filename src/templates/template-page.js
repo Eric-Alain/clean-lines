@@ -144,8 +144,8 @@ export const templatePageQuery = graphql`
             subheading
             headingLevel
             id
-            image
             alt
+            image
             imageFloat
             imageWidth
             text
