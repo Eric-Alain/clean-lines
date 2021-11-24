@@ -27,23 +27,23 @@ pageSections:
       buttonText: Learn more
       buttonLocation: /about
     - buttonText: Learn more
-      buttonLocation: /technical/rules-and-reffing
+      buttonLocation: /services
       subheading: Services
       text: What we have to offer.
       image:
         - https://res.cloudinary.com/dky5oko1h/image/upload/v1635866302/Clean%20lines%20/Gallery%20one/about_b5ced1.jpg
-    - buttonText: Check out blog
-      buttonLocation: /events
-      image:
-        - https://res.cloudinary.com/dky5oko1h/image/upload/v1635866300/Clean%20lines%20/Gallery%20one/services_gycc3d.jpg
-      subheading: Blog
-      text: See what's new and exciting in our world.
     - buttonText: Check out galleries
       buttonLocation: /galleries
       image:
         - https://res.cloudinary.com/dky5oko1h/image/upload/v1637176940/Clean%20lines%20/Gallery%20two/jay-mantri-TFyi0QOx08c-unsplash_twx0mv.jpg
       subheading: Galleries
       text: See galleries of our latest work and events.
+    - buttonText: Check out blog
+      buttonLocation: /blog
+      image:
+        - https://res.cloudinary.com/dky5oko1h/image/upload/v1635866300/Clean%20lines%20/Gallery%20one/services_gycc3d.jpg
+      subheading: Blog
+      text: See what's new and exciting in our world.
     - buttonText: Contact
       buttonLocation: /contact
       image:

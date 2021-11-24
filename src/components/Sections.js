@@ -19,7 +19,7 @@ const Sections = ({ pageSections }) => {
                       <h3 className='mb-1 pb-1 border-bottom'>{section.subheading}</h3>
                     </Card.Title>
                     <Card.Text>{section.text}</Card.Text>
-                    <Link className='btn' to={`${section.buttonLocation}`}>
+                    <Link className='btn' to={section.buttonLocation}>
                       {section.buttonText}
                     </Link>
                   </Card.Body>

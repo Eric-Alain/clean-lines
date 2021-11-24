@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 import logo from '../img/logo.png';
 import { Container, Navbar, Nav, NavDropdown, Row, Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -8,6 +9,75 @@ import { faFacebook, faInstagram, faTwitter, faYoutube } from '@fortawesome/free
 import { gsap, Sine } from 'gsap';
 
 const NavbarHeader = () => {
+  //Query for existing files that we'd like to generate link lists from, the idea being to make less manual work for whenever we add new pages
+  const linksQuery = useStaticQuery(
+    graphql`
+      query linksQuery {
+        templatePages: allFile(filter: { childMarkdownRemark: { frontmatter: { templateKey: { eq: "template-page" } } } }) {
+          edges {
+            node {
+              name
+              relativePath
+            }
+          }
+        }
+        galleryPages: allFile(filter: { childMarkdownRemark: { frontmatter: { templateKey: { eq: "gallery-page" } } } }) {
+          edges {
+            node {
+              name
+              relativePath
+            }
+          }
+        }
+      }
+    `
+  );
+
+  //Helper function - convert slugs to sentence cased strings
+  const slugToString = (str) =>
+    str
+      .toLowerCase()
+      .split('-')
+      .map((i) => i[0].toUpperCase() + i.substr(1))
+      .join(' ');
+
+  //Variable for data from graphql query
+  const templates = linksQuery.templatePages.edges;
+
+  //Render link list for all desired template pages, optional parameter for exluding certain links based on file name, returns a filtered array of Gatsby <Link> components
+  const renderTemplateLinks = (query, exclusions = '') => {
+    const filtered = query.filter((el) => {
+      return exclusions.indexOf(el.node.name) === -1;
+    });
+
+    return filtered.map((item, i) => {
+      return (
+        <Link to={`/${item.node.relativePath.replace(/(.*?)\..*/, '$1')}`} className='dropdown-item' key={i}>
+          {slugToString(item.node.name)}
+        </Link>
+      );
+    });
+  };
+
+  //Variable for data from graphql query
+  const galleries = linksQuery.galleryPages.edges;
+
+  //Render link list for all desired gallery pages, optional parameter for exluding certain links based on file name, returns a filtered array of Gatsby <Link> components
+  const renderGalleryLinks = (query, exclusions = '') => {
+    const filtered = query.filter((el) => {
+      return exclusions.indexOf(el.node.name) === -1;
+    });
+
+    return filtered.map((item, i) => {
+      return (
+        <Link to={`/${item.node.relativePath.replace(/(.*?)\..*/, '$1')}`} className='dropdown-item' key={i}>
+          {slugToString(item.node.name)}
+        </Link>
+      );
+    });
+  };
+
+  //For mobile menu toggle animations
   const toggleRef = useRef();
   const [expand, setExpand] = useState(false);
 
@@ -48,12 +118,7 @@ const NavbarHeader = () => {
                   About
                 </Link>
                 <NavDropdown title='Services' id='services-dropdown' renderMenuOnMount={true}>
-                  <Link to='/demo' className='dropdown-item'>
-                    CMS Demo
-                  </Link>
-                  <Link to='/services' className='dropdown-item'>
-                    Services
-                  </Link>
+                  {renderTemplateLinks(templates, ['about'])}
                 </NavDropdown>
                 <Link to='/blog' className='nav-link'>
                   Blog
@@ -62,15 +127,7 @@ const NavbarHeader = () => {
                   <Link to='/galleries/landing' className='dropdown-item'>
                     All galleries
                   </Link>
-                  <Link to='/galleries/demo-1' className='dropdown-item'>
-                    Demo 1
-                  </Link>
-                  <Link to='/galleries/demo-2' className='dropdown-item'>
-                    Demo 2
-                  </Link>
-                  <Link to='/galleries/demo-3' className='dropdown-item'>
-                    Demo 3
-                  </Link>
+                  {renderGalleryLinks(galleries)}
                 </NavDropdown>
                 <Link to='/contact' className='nav-link'>
                   Contact
