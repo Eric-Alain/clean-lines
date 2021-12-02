@@ -12,7 +12,7 @@ CMS.registerMediaLibrary(cloudinary);
 // Make sure that the 'name' argument matches the collections 'name' field in the cms config.yml file
 // Otherwise, the preview template won't register
 
-CMS.registerPreviewTemplate('landing', IndexPagePreview);
+CMS.registerPreviewTemplate('landing-page', IndexPagePreview);
 CMS.registerPreviewTemplate('gallery-pages', GalleryPagePreview);
 CMS.registerPreviewTemplate('template-pages', TemplatePagePreview);
 CMS.registerPreviewTemplate('blog', BlogPostPreview);

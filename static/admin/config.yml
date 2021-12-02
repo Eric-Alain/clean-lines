@@ -31,7 +31,7 @@ collections:
     files:
       - file: 'src/pages/landing.md'
         label: 'Landing page'
-        name: 'landing'
+        name: 'landing-page'
         fields:
           - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'index-page' }
           # hero banner, title and subheading
