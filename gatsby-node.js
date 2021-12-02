@@ -72,16 +72,6 @@ exports.createPages = ({ actions, graphql }) => {
   })
 }
 
-exports.createSchemaCustomization = ({ actions }) => {
-  const { createTypes } = actions;
-  const typeDefs = `
-      type MarkdownRemarkFrontmatterTemplatePageSectionsTemplateSection implements Node {
-        image: [String]
-      }
-    `;
-  createTypes(typeDefs);
-};
-
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
   fmImagesToRelative(node) // convert image paths for gatsby images

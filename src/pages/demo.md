@@ -27,7 +27,8 @@ templatePageSections:
     - subheading: Heading (h2 level) and two column text layout
       headingLevel: h2
       id: a1
-      image: ''
+      image:
+        - ''
       imageFloat: default
       imageWidth: default
       text: >-
@@ -101,7 +102,8 @@ templatePageSections:
     - subheading: Subheading (h5) level
       headingLevel: h5
       id: a4
-      image: ''
+      image:
+        - ''
       imageFloat: default
       imageWidth: default
       text: It is a long established fact that a reader will be distracted by the
@@ -117,7 +119,8 @@ templatePageSections:
     - subheading: Subheading (h6 level)
       headingLevel: h6
       id: a5
-      image: ''
+      image: 
+        - ''
       imageFloat: default
       imageWidth: default
       text: This one doesn't really make sense, but you get the point...

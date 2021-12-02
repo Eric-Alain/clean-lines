@@ -33,7 +33,8 @@ templatePageSections:
     - subheading: Service 2
       headingLevel: h2
       id: a2
-      image: ''
+      image: 
+        - ''
       imageFloat: default
       imageWidth: default
       text: Nordic ANA hub, discerning impeccable boutique Singapore remarkable sharp
@@ -47,7 +48,8 @@ templatePageSections:
     - subheading: Service 3
       headingLevel: h2
       id: a3
-      image: ''
+      image: 
+        - ''
       imageFloat: default
       imageWidth: default
       text: Airport Marylebone Porter hand-crafted Beams. Ginza global joy
@@ -88,7 +90,8 @@ templatePageSections:
     - subheading: Service 5
       headingLevel: h2
       id: a5
-      image: ''
+      image: 
+        - ''
       imageFloat: default
       imageWidth: default
       text: >-
