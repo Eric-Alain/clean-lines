@@ -29,9 +29,9 @@ collections:
   - label: 'Unique pages'
     name: 'unique-pages'
     files:
-      - file: 'src/pages/index.md'
+      - file: 'src/pages/landing.md'
         label: 'Landing page'
-        name: 'index'
+        name: 'landing'
         fields:
           - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'index-page' }
           # hero banner, title and subheading
