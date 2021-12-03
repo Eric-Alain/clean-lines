@@ -68,7 +68,7 @@ collections:
                   }
                 ]
             }
-      - file: 'src/pages/gallery-landing.md'
+      - file: 'src/pages/all-galleries.md'
         label: 'Gallery landing'
         name: 'gallery-landing'
         fields:
