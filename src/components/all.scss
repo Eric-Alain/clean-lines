@@ -96,6 +96,22 @@ body {
   overflow-x: hidden;
 }
 
+//This allows the footer to remain at the bottom of the page and for the for
+//the main content of the page to use up the remaining available space
+.main-container {
+  display: flex;
+  flex-flow: column;
+  height: 100vh;
+
+  .main-content {
+    flex: 1 1 auto;
+
+    footer {
+      flex: 0 1 auto;
+    }
+  }
+}
+
 main {
   margin: 5rem auto;
 
@@ -530,7 +546,7 @@ footer {
       .btn {
         background: $alt-black;
         color: $primary-invert;
-        
+
         &:hover {
           background: lighten($alt-black, 15%);
         }
