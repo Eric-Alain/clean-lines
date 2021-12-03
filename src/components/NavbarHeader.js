@@ -21,6 +21,10 @@ const NavbarHeader = () => {
             }
           }
         }
+        galleryLanding: file(childMarkdownRemark: { frontmatter: { templateKey: { eq: "gallery-landing" } } }) {
+          name
+          relativePath
+        }
         galleryPages: allFile(filter: { childMarkdownRemark: { frontmatter: { templateKey: { eq: "gallery-page" } } } }) {
           edges {
             node {
@@ -58,6 +62,10 @@ const NavbarHeader = () => {
       );
     });
   };
+
+  //Variable for data from graphql query
+  const galleryLanding = linksQuery.galleryLanding
+  console.log(galleryLanding.relativePath);
 
   //Variable for data from graphql query
   const galleries = linksQuery.galleryPages.edges;
@@ -124,8 +132,8 @@ const NavbarHeader = () => {
                   Blog
                 </Link>
                 <NavDropdown title='Galleries' id='galleries-dropdown' renderMenuOnMount={true}>
-                  <Link to='/galleries/landing' className='dropdown-item'>
-                    All galleries
+                  <Link to={`/${galleryLanding.relativePath.replace(/(.*?)\..*/, '$1')}`} className='dropdown-item'>
+                    {slugToString(galleryLanding.name)}
                   </Link>
                   {renderGalleryLinks(galleries)}
                 </NavDropdown>

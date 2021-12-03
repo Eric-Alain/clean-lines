@@ -68,6 +68,19 @@ collections:
                   }
                 ]
             }
+      - file: 'src/pages/gallery-landing.md'
+        label: 'Gallery landing'
+        name: 'gallery-landing'
+        fields:
+          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'gallery-landing' }
+          - { label: 'Title', name: 'title', widget: 'string', default: 'All Galleries' }
+          - {
+              label: Description,
+              name: description,
+              widget: string,
+              default: 'Describe put a cool description of your galleries if you want. Describe what the user might expect to find here.',
+              required: false
+            }
 
   # Collection of all pages found in the technical menu
   - label: 'Gallery pages'
