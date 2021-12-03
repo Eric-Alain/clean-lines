@@ -132,8 +132,8 @@ const NavbarHeader = () => {
                   Blog
                 </Link>
                 <NavDropdown title='Galleries' id='galleries-dropdown' renderMenuOnMount={true}>
-                  <Link to={`/${galleryLanding.relativePath.replace(/(.*?)\..*/, '$1')}`} className='dropdown-item'>
-                    {slugToString(galleryLanding.name)}
+                  <Link to='/all-galleries' className='dropdown-item'>
+                    All galleries
                   </Link>
                   {renderGalleryLinks(galleries)}
                 </NavDropdown>
