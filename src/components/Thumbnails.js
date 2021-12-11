@@ -5,36 +5,45 @@ import { Row, Col, Card } from 'react-bootstrap';
 import { Link } from 'gatsby';
 
 const Thumbnails = ({ galleries }) => {
+
+  //Helper function - convert slugs to sentence cased strings
+  const slugToString = (str) =>
+    str
+      .toLowerCase()
+      .split('-')
+      .map((i) => i[0].toUpperCase() + i.substr(1))
+      .join(' ')
+      .replace(/(^\w{1}|\.\s*\w{1})/gi, (replaced) => {
+        return replaced.toUpperCase();
+      });
+
   return (
-    <Row className='justify-content-center'>
-      {galleries.map((item, i) => {
-        return (
-          <Col xs='12' lg='4' key={i} className='mb-3'>
-            <Card className='rounded-0 p-0 p-md-4'>
-              <Card.Body>
-                <Card.Title>
-                  <h3 className='mb-1 pb-1 border-bottom'>{item.title || ''}</h3>
-                </Card.Title>
-                <div className='zoom-overlay'>
-                  <PreviewCompatibleImage
-                    imageInfo={{
-                      image: item.gallery.images[0] || '',
-                      className: 'w-100 float-none'
-                    }}
-                  />
-                </div>
-                {/*
-                <Card.Text>{section.text}</Card.Text>
-                <Link className='btn' to={`${gallery.location}`}>
-                   {gallery.buttonText}
-                </Link>
-                */}
-              </Card.Body>
-            </Card>
-          </Col>
-        );
-      })}
-    </Row>
+    <>
+      <Col xs='12' lg='4' className='mb-3'>
+        <Card className='rounded-0 p-0 p-md-4'>
+          <Card.Body>
+            <Card.Title>
+              <h3 className='mb-1 pb-1 border-bottom'>{slugToString(galleries.name) || ''}</h3>
+            </Card.Title>
+            {galleries.galleries.map((item, i) => {
+              return item.map((inner, j) => {
+                return (
+                  <div className={`stack-${i}`} key={j}>
+                    <PreviewCompatibleImage
+                      imageInfo={{
+                        image: inner,
+                        className: 'w-100'
+                      }}
+                    />
+                  </div>
+                );
+              });              
+            })}
+            <div className='zoom-overlay'></div>
+          </Card.Body>
+        </Card>
+      </Col>
+    </>
   );
 };
 /*

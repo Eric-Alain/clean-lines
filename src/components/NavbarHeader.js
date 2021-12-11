@@ -25,7 +25,7 @@ const NavbarHeader = () => {
           name
           relativePath
         }
-        galleryPages: allFile(filter: { childMarkdownRemark: { frontmatter: { templateKey: { eq: "gallery-page" } } } }) {
+        galleryPages: allFile(filter: { childMarkdownRemark: { frontmatter: { templateKey: { eq: "gallery-page" } } } }, sort: { fields: birthTime }) {
           edges {
             node {
               name
@@ -43,7 +43,10 @@ const NavbarHeader = () => {
       .toLowerCase()
       .split('-')
       .map((i) => i[0].toUpperCase() + i.substr(1))
-      .join(' ');
+      .join(' ')
+      .replace(/(^\w{1}|\.\s*\w{1})/gi, (replaced) => {
+        return replaced.toUpperCase();
+      });
 
   //Variable for data from graphql query
   const templates = linksQuery.templatePages.edges;
@@ -65,7 +68,6 @@ const NavbarHeader = () => {
 
   //Variable for data from graphql query
   const galleryLanding = linksQuery.galleryLanding
-  console.log(galleryLanding.relativePath);
 
   //Variable for data from graphql query
   const galleries = linksQuery.galleryPages.edges;
