@@ -117,9 +117,8 @@ collections:
   - label: 'Template pages'
     label_singular: 'template page'
     name: 'template-pages'
-    folder: 'src/pages/{{slug}}'
+    folder: 'src/pages/content'
     create: true
-    #slug: 'index'
     fields:
       - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'template-page' }
       - { label: 'Title', name: 'title', widget: 'string' }
