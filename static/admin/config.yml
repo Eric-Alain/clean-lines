@@ -14,6 +14,10 @@ backend:
     uploadMedia: '[skip ci] Upload “{{path}}”'
     deleteMedia: '[skip ci] Delete “{{path}}”'
 
+slug:
+  encoding: "ascii"
+  clean_accents: true
+
 media_library:
   name: cloudinary
   config:
@@ -29,7 +33,7 @@ collections:
   - label: 'Unique pages'
     name: 'unique-pages'
     files:
-      - file: 'src/pages/landing.md'
+      - file: 'src/pages/index.md'
         label: 'Landing page'
         name: 'landing-page'
         fields:
@@ -113,9 +117,9 @@ collections:
   - label: 'Template pages'
     label_singular: 'template page'
     name: 'template-pages'
-    folder: 'src/pages'
+    folder: 'src/pages/{{slug}}'
     create: true
-    slug: '{{slug}}'
+    slug: 'index'
     fields:
       - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'template-page' }
       - { label: 'Title', name: 'title', widget: 'string' }

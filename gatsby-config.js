@@ -69,7 +69,7 @@ module.exports = {
       options: {
         modulePath: `${__dirname}/src/cms/cms.js`
       }
-    },    
+    },
     /*{
       resolve: 'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
       options: {
@@ -77,6 +77,16 @@ module.exports = {
         purgeOnly: ['/all.scss'] // applies purging only on the bulma css file
       }
     }, // must be after other CSS plugins*/
+    {
+      resolve: `gatsby-plugin-netlify-cms`,
+      options: {
+        /**
+         * One convention is to place your Netlify CMS customization code in a
+         * `src/cms` directory.
+         */
+        modulePath: `${__dirname}/src/cms/cms.js`
+      }
+    },
     'gatsby-plugin-netlify' // make sure to keep it last in the array
   ]
 };
