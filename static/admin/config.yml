@@ -119,7 +119,7 @@ collections:
     name: 'template-pages'
     folder: 'src/pages/{{slug}}'
     create: true
-    slug: 'index'
+    #slug: 'index'
     fields:
       - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'template-page' }
       - { label: 'Title', name: 'title', widget: 'string' }

@@ -136,7 +136,7 @@ export default TemplatePage;
 
 export const templatePageQuery = graphql`
   query templatePageQuery($id: String!) {
-    markdownRemark(id: { eq: $id }) {
+    markdownRemark(id: { eq: $id }, frontmatter: { templateKey: { eq: "template-page" } }) {
       frontmatter {
         title
         templatePageSections {
