@@ -651,9 +651,11 @@ footer {
   .ReactGridGallery_tile {
     height: 25vh;
     width: 49%;
+    margin: 1px!important;
 
     @include md {
       width: 32.5%;
+      margin: 2px!important;
     }
 
     @include lg {

@@ -17,7 +17,7 @@ export const IndexPageTemplate = ({ landingBox, catchyBanner, pageSections }) =>
             backgroundImage: `url(${!!landingBox.image.childImageSharp ? landingBox.image.childImageSharp.fluid.src : landingBox.image})`
           }}
         >
-          <Row className='justify-content-center'>
+          <Row className='justify-content-center mx-2 mx-sm-auto'>
             <Col xs='10' className='hero-text text-center p-4'>
               <h1 className='display-2'>{landingBox.title}</h1>
               <h3 className='text-muted fw-normal'>{landingBox.subheading}</h3>
