@@ -9,7 +9,21 @@ module.exports = {
       'This repo is based off the example business website that is built with Gatsby, and Netlify CMS. It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.'
   },
   plugins: [
-    `gatsby-plugin-csp`,
+    {
+      resolve: `gatsby-plugin-csp`,
+      options: {
+        mergeScriptHashes: false,
+        mergeStyleHashes: false,
+        directives: {
+          'script-src': `'self' 'unsafe-inline' 'unsafe-eval'`,
+          'script-src-elem': `'self' 'unsafe-inline' 'unsafe-eval'`,
+          'style-src': `'self' 'unsafe-inline'`,
+          'img-src': `'self' https://res.cloudinary.com`,
+          'media-src': `'self' https://res.cloudinary.com`,
+          'font-src': `'self' data: https://fontawesome.com`
+        }
+      }
+    },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     {
