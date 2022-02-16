@@ -38,7 +38,7 @@
     "react-dom": "^16.8.4",
     "react-grid-gallery": "^0.5.5",
     "react-helmet": "^6.0.0",
-    "showdown": "^1.9.1",
+    "showdown": "^2.0.0",
     "uuid": "^7.0.0"
   },
   "keywords": [
